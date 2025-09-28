@@ -1,6 +1,3 @@
 theme: jekyll-theme-slate
 title: TBO Retro Page
 description: My Retro Collection
-collections:
-  omputers:
-    output: true
