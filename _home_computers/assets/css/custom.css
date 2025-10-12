@@ -1,0 +1,14 @@
+/* Normalize spacing between list items */
+li > ul {
+  margin-top: 0.25em;   /* small space above nested list */
+  margin-bottom: 0.25em; /* small space below nested list */
+}
+
+/* Tighten list item spacing overall */
+ul, ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+li {
+  margin-bottom: 0.25em;
+}
