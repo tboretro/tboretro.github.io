@@ -6,16 +6,17 @@ url: "https://tboretro.github.io"
 collections:
   home_computers:
     output: true
+  # Do not forget to add new collections to the defaults below!
 
 defaults:
   - scope:
       path: ""      # site-wide
       type: "pages"
     values:
-      layout: "my_default"
+      layout: "tboretro"
 
   - scope:
       path: ""      # site-wide
       type: "home_computers"
     values:
-      layout: "my_default"
+      layout: "tboretro"
