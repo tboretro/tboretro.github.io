@@ -16,6 +16,6 @@ defaults:
 
   - scope:
       path: ""      # site-wide
-      type: "documents"
+      type: "home_computers"
     values:
       layout: "my_default"
