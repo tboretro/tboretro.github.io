@@ -1,24 +1,30 @@
 ---
 ---
 
-@import "{{ site.theme }}";  // ← this pulls in the entire theme’s default CSS
+@import "{{ site.theme }}";  // This pulls in the entire theme’s default CSS
 
-body {
-  color: red !important;
-  background-color: #111 !important;
+/* Now changes to this default style: */
+
+/* Compact, uniform list spacing (works for nested lists too) */
+
+/* Reset margins for the list containers */
+ul,
+ol {
+  margin-top: 0.25em;   /* small top spacing */
+  margin-bottom: 0.25em; /* small bottom spacing */
+  padding-left: 1.2em;  /* standard indent */
 }
 
-/* Normalize spacing between list items */
-li > ul {
-  margin-top: 0.25em;   /* small space above nested list */
-  margin-bottom: 0.25em; /* small space below nested list */
+/* Keep nested lists visually close to their parent item */
+ul ul,
+ol ol {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
-/* Tighten list item spacing overall */
-ul, ol {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
+/* Tighter spacing between bullet points */
 li {
-  margin-bottom: 0.25em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  line-height: 1.4; /* keeps text readable */
 }
