@@ -4,7 +4,7 @@ released: 1987
 layout: default
 ---
 
-# Amiga 500
+# {{ page.title }}
 
 ## Information
 

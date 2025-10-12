@@ -4,7 +4,7 @@ released: 1982
 layout: default
 ---
 
-# Commodore 64
+# {{ page.title }}
 
 ## Information
 

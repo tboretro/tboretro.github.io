@@ -4,7 +4,7 @@ released: 1986
 layout: default
 ---
 
-# Atari ST
+# {{ page.title }}
 
 ## Information
 
