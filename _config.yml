@@ -1,5 +1,5 @@
 theme: jekyll-theme-slate
-title: "TBO Retro Page"
+title: "<a href='/' >TBO Retro Page</a>"
 description: "My Retro Collection"
 url: "https://tboretro.github.io"
 
@@ -10,12 +10,12 @@ collections:
 defaults:
   - scope:
       path: ""      # site-wide
-      type: "pages" # "normal" pages
+      type: "pages"
     values:
       layout: "my_default"
 
   - scope:
       path: ""      # site-wide
-      type: "documents" # all collections
+      type: "documents"
     values:
       layout: "my_default"
