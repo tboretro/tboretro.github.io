@@ -14,6 +14,4 @@ This is just a space to keep track of my collection of retro computrer stuff
 
 * Add all Computers
 
-* Shoot and add some photos
-
-* Sort out [Jekyll](https://jekyllrb.com/) to use collections in mark-down, maybe have some kind of navigation sidebar
+* Add phto gallery (see )

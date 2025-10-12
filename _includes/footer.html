@@ -1,0 +1,17 @@
+<script>
+  // Script to make al external links open in a new tab
+
+  // When the page loads, find all <a> links
+  document.addEventListener("DOMContentLoaded", function() {
+    const siteHost = window.location.hostname;
+
+    document.querySelectorAll('a[href]').forEach(function(link) {
+      const url = new URL(link.href, window.location.origin);
+      // If the hostname is different, it's an external link
+      if (url.hostname !== siteHost) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  });
+</script>
