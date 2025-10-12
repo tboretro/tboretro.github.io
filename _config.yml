@@ -2,6 +2,12 @@ theme: jekyll-theme-slate
 title: <a href="/">TBO Retro Page</a>
 description: My Retro Collection
 url: https://tboretro.github.io
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: my_default
 collections:
   home_computers:
     output: true

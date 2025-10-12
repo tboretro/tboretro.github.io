@@ -1,7 +1,6 @@
 ---
 title: Commodore 64
 released: 1982
-layout: default
 ---
 
 # {{ page.title }}

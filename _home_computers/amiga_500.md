@@ -1,7 +1,6 @@
 ---
 title: Amiga 500
 released: 1987
-layout: default
 ---
 
 # {{ page.title }}

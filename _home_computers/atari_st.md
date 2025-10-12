@@ -1,7 +1,6 @@
 ---
 title: Atari ST
 released: 1986
-layout: default
 ---
 
 # {{ page.title }}

@@ -14,4 +14,4 @@ This is just a space to keep track of my collection of retro computrer stuff
 
 * Add all Computers
 
-* Add phto gallery (see )
+* Add photo gallery (see ChatGPT chat for ideas how to)
