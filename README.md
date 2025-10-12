@@ -1,17 +1,13 @@
 # My Collection
+
 This is just a space to keep track of my collection of retro computrer stuff
 
 ## Home Computers
 
-{% for item in site.home_computers %}
+{% assign sorted_home_computers = site.home_computers | sort: "released" %}
+{% for item in sorted_home_computers %}
   <a href="{{ item.url | relative_url }}">{{ item.title }}</a><br>
 {% endfor %}
-
-[Amiga 500](computers/amiga_500.md)
-
-[Atari ST](computers/atari_st.md)
-
-[Commdore 64](computers/commodore_64.md)
 
 Apple \]\[c
 
