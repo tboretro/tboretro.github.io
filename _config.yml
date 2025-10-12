@@ -1,18 +1,21 @@
 theme: jekyll-theme-slate
-title: <a href="/">TBO Retro Page</a>
-description: My Retro Collection
-url: https://tboretro.github.io
-defaults:
-  - scope:
-      path: ""
-      type: documents # all items in all collections
-    values:
-      layout: my_default
-  - scope:
-      path: ""
-      type: pages # all "normal" pages
-    values:
-      layout: my_default
+title: "TBO Retro Page"
+description: "My Retro Collection"
+url: "https://tboretro.github.io"
+
 collections:
   home_computers:
     output: true
+
+defaults:
+  - scope:
+      path: ""      # site-wide
+      type: "pages" # "normal" pages
+    values:
+      layout: "my_default"
+
+  - scope:
+      path: ""      # site-wide
+      type: "documents" # all collections
+    values:
+      layout: "my_default"

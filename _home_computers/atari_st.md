@@ -5,6 +5,8 @@ released: 1986
 
 # {{ page.title }}
 
+Layout used: {{ page.layout }}
+
 ## Information
 
 Model: Atari ST 1040 STF (german)
