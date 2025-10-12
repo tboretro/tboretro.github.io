@@ -6,7 +6,8 @@ url: "https://tboretro.github.io"
 collections:
   home_computers:
     output: true
-  # Do not forget to add new collections to the defaults below!
+  ibm_compatibles:
+    output: true  # Do not forget to add new collections to the defaults below!
 
 defaults:
   - scope:
@@ -14,9 +15,13 @@ defaults:
       type: "pages"
     values:
       layout: "tboretro"
-
   - scope:
       path: ""      # site-wide
       type: "home_computers"
+    values:
+      layout: "tboretro"
+  - scope:
+      path: ""      # site-wide
+      type: "ibm_compatibles"
     values:
       layout: "tboretro"
