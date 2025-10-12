@@ -7,13 +7,11 @@ This is just a space to keep track of my collection of retro computrer stuff
 
 [Atari ST](computers/atari_st.md)
 
+[Commdore 64](computers/commodore_64.md)
+
 Apple \]\[c
 
-Commdore 64
-
 ## Interals / To-Dos
-
-* Add Amiga 500 board revision
 
 * Add all Computers
 

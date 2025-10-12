@@ -4,7 +4,7 @@
 
 Model: Atari ST 1040 STF (german)
 
-Serial Number: A18404124418 M
+Case Serial Number: A18404124418 M
 
 Board Revision: C070859-001
 
