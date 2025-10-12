@@ -1,3 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}";  // ← this pulls in the entire theme’s default CSS
+
 /* Normalize spacing between list items */
 li > ul {
   margin-top: 0.25em;   /* small space above nested list */
