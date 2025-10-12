@@ -1,5 +1,5 @@
 ---
-title: Apple ][c
+title: Apple IIc
 released: 1984
 layout: default
 ---
