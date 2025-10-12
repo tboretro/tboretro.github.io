@@ -5,7 +5,12 @@ url: https://tboretro.github.io
 defaults:
   - scope:
       path: ""
-      type: pages
+      type: documents # all items in all collections
+    values:
+      layout: my_default
+  - scope:
+      path: ""
+      type: pages # all "normal" pages
     values:
       layout: my_default
 collections:
