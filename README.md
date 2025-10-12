@@ -3,12 +3,9 @@ This is just a space to keep track of my collection of retro computrer stuff
 
 ## Home Computers
 
-<ul>
-  {% for item in site.home_computers %}
-    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-  {% endfor %}
-</ul>
-
+{% for item in site.home_computers %}
+  <a href="{{ item.url | relative_url }}">{{ item.title }}</a><br>
+{% endfor %}
 
 [Amiga 500](computers/amiga_500.md)
 

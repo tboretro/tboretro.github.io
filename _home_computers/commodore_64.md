@@ -1,5 +1,6 @@
 ---
 title: Commodore 64
+layout: default
 ---
 
 # Commodore 64

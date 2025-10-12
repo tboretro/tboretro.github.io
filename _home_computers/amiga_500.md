@@ -1,5 +1,6 @@
 ---
 title: Amiga 500
+layout: default
 ---
 
 # Amiga 500

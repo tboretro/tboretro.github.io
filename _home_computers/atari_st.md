@@ -1,5 +1,6 @@
 ---
 title: Atari ST
+layout: default
 ---
 
 # Atari ST
