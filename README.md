@@ -4,9 +4,10 @@ This is just a space to keep track of my collection of retro computer stuff
 
 ## Home Computers
 
-{% assign sorted_home_computers = site.home_computers 
-  | where_exp: "item", "item.progress != nil and (item.progress == 'started' or item.progress == 'done')" 
-  | sort: "released" %}
+{% assign started_items = site.home_computers | where: "progress", "started" %}
+{% assign done_items = site.home_computers | where: "progress", "done" %}
+{% assign filtered = started_items | concat: done_items %}
+{% assign sorted_home_computers = filtered | sort: "released" %}
 {% for item in sorted_home_computers %}
   <a href="{{ item.url | relative_url }}">{{ item.title }} (released in {{ item.released }})</a>
   {% if item.documented != 'done' %} <em> — documentation in progress</em> {% endif %}
