@@ -8,11 +8,11 @@ This is just a space to keep track of my collection of retro computer stuff
 {% assign done_items = site.home_computers | where: "progress", "done" %}
 {% assign filtered = started_items | concat: done_items %}
 {% assign sorted_home_computers = filtered | sort: "released" %}
-{% for item in sorted_home_computers %}
+{% for item in sorted_home_computers -%}
   <a href="{{ item.url | relative_url }}">{{ item.title }} (released in {{ item.released }})</a>
   {% if item.documented != 'done' %} <em> — documentation in progress</em> {% endif %}
   <br>
-{% endfor %}
+{%- endfor %}
 
 ## IBM Compatible
 
