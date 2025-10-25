@@ -8,24 +8,8 @@ This is just a space to keep track of my collection of retro computer stuff
 {% assign done_items = site.home_computers | where: "progress", "done" %}
 {% assign filtered = started_items | concat: done_items %}
 {% assign sorted_home_computers = filtered | sort: "released" %}
-<ul>
-{% for item in sorted_home_computers %}
-  {% assign display_text = item.title %}
-  {% if item.class %}
-    {% assign display_text = display_text | append: " (" | append: item.class | append: "-class, released in " | append: item.released | append: ")" %}
-  {% else %}
-    {% assign display_text = display_text | append: " (released in " | append: item.released | append: ")" %}
-  {% endif %}
-  <li>
-  {% if item.documented == "stub" %}
-    {{ display_text }} <em>— documentation pending</em>
-  {% else %}
-    <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-    {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
-  {% endif %}
-  </li>
-{% endfor %}
-</ul>
+
+{% include collection_list.html items=sorted_home_computers %}
 
 ## IBM Compatible
 
