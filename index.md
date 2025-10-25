@@ -19,7 +19,7 @@ This is just a space to keep track of my collection of retro computer stuff
 ## IBM Portables
 
 {% include collection_list.html 
-   collections="ibm_portables" 
+   collections="ibm_compatibles" 
    sort_fields="released,class" 
    progress_values="started,done" %}
 
