@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<!-- set class to reference in css -->
 <div class="{% if page.url == '/' %}page-index{% else %}page-{{ page.slug | default: page.title | slugify }}{% endif %}">
 
   {{ content }}
