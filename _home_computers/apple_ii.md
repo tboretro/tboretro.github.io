@@ -26,7 +26,7 @@ Board Serial Number: 1385673
 * Added [FloppyEmu](https://www.bigmessowires.com/floppy-emu) which provides floppy and hard drive emulation
   * Including the drive switcher to boot from FloppyEmu
 * Updated to [ROM 4X](https://github.com/mgcaret/rom4x)
-* Added a new power brcik
+* Added a new power brick
 
 ## Links
 
