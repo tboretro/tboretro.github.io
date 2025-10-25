@@ -14,7 +14,7 @@
   {% assign filtered_items = "" | split: "" %}
   
   {% for value in progress_values %}
-    {% assign matching_items = collection_items | where: "progress", value %}
+    {% assign matching_items = collection_items | where: "progress", value | default: "" | split: "" %}
     {% assign filtered_items = filtered_items | concat: matching_items %}
   {% endfor %}
 
