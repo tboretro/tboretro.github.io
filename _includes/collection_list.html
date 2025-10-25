@@ -27,11 +27,19 @@
   {% for item in sorted_items %}
     <li>
       {% assign display_text = item.title %}
-      {% if item.class %}
-        {% assign display_text = display_text | append: " (" | append: item.class | append: "-class, released in " | append: item.released | append: ")" %}
-      {% else %}
-        {% assign display_text = display_text | append: " (released in " | append: item.released | append: ")" %}
-      {% endif %}
+      {%- assign info_parts = "" | split: "" -%}  {# create empty array #}
+
+      {%- if item.released -%}
+        {% assign info_parts = info_parts | push: "released in " | append: item.released %}
+      {%- endif -%}
+
+      {%- if item.class -%}
+        {% assign info_parts = info_parts | push: item.class | append: "-class" %}
+      {%- endif -%}
+
+      {%- if info_parts.size > 0 -%}
+        {% assign display_text = display_text | append: " (" | append: info_parts | join: ", " | append: ")" %}
+      {%- endif -%}
 
       {% if item.documented == "stub" %}
         {{ display_text }} <em>— documentation pending</em>
