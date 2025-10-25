@@ -5,25 +5,33 @@
 
 /* Now changes to this default style: */
 
-/* Compact, uniform list spacing (works for nested lists too) */
+/* No bullet points and margins in lists on main page */
+
+body.page-index ul,
+body.page-index ol {
+  list-style: none;   // keine Punkte
+  padding-left: 0;    // optional: Einzug entfernen
+}
+
+/* Compact, uniform list spacing (works for nested lists too) on all other pages */
 
 /* Reset margins for the list containers */
-ul,
-ol {
+body:not(.page-index) ul,
+body:not(.page-index) ol {
   margin-top: 0.25em;   /* small top spacing */
   margin-bottom: 0.25em; /* small bottom spacing */
   padding-left: 1.2em;  /* standard indent */
 }
 
 /* Keep nested lists visually close to their parent item */
-ul ul,
-ol ol {
+body:not(.page-index) ul ul,
+body:not(.page-index) ol ol {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
 
 /* Tighter spacing between bullet points */
-li {
+body:not(.page-index) li {
   margin-top: 0.1em;
   margin-bottom: 0.1em;
   line-height: 1.4; /* keeps text readable */

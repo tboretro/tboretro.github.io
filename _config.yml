@@ -9,6 +9,8 @@ collections:
   ibm_compatibles:
     output: true
   ibm_portables:
+    output: true
+  game_consoles:
     output: true  # Do not forget to add new collections to the defaults below!
 
 defaults:
@@ -30,5 +32,10 @@ defaults:
   - scope:
       path: ""      # site-wide
       type: "ibm_portables"
+    values:
+      layout: "tboretro"             
+  - scope:
+      path: ""      # site-wide
+      type: "game_consoles"
     values:
       layout: "tboretro"      
