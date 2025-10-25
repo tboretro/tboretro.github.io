@@ -19,7 +19,7 @@ Board Revision: 6A, which includes an ECS Agnus chip
 
 ## Original Peripherals
 
-* Tank Mouse
+* Commodore Amiga Tank Mouse
 * 512KB fast mem RAM extension
 
 ## Modern Additions/Mods

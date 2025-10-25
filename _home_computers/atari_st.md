@@ -17,8 +17,8 @@ Board Revision: C070859-001
 
 ## Original Peripherals
 
-* Monitor SM124
-* Mouse STM1
+* Monitor Atari SM124
+* Mouse Atari STM1
 
 ## Modern Additions/Mods
 
