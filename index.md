@@ -10,9 +10,19 @@ This is just a space to keep track of my collection of retro computer stuff
 {% assign sorted_home_computers = filtered | sort: "released" %}
 <ul>
 {% for item in sorted_home_computers %}
+  {% assign display_text = item.title %}
+  {% if item.class %}
+    {% assign display_text = display_text | append: " (" | append: item.class | append: "-class, released in " | append: item.released | append: ")" %}
+  {% else %}
+    {% assign display_text = display_text | append: " (released in " | append: item.released | append: ")" %}
+  {% endif %}
   <li>
-  <a href="{{ item.url | relative_url }}">{{ item.title }} (released in {{ item.released }})</a>
-  {% if item.documented != 'done' %} <em> — documentation in progress</em> {% endif %}
+  {% if item.documented == "stub" %}
+    {{ display_text }} <em>— documentation pending</em>
+  {% else %}
+    <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
+    {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+  {% endif %}
   </li>
 {% endfor %}
 </ul>
