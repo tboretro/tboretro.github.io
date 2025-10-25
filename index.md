@@ -28,7 +28,10 @@ This is just a space to keep track of my collection of retro computer stuff
 
 ## IBM Portables
 
-{% assign sorted_ibm_portables = site.ibm_portables | sort: "released" | sort: "class" %}
+{% assign started_items = site.ibm_portables | where: "progress", "started" %}
+{% assign done_items = site.ibm_portables | where: "progress", "done" %}
+{% assign filtered = started_items | concat: done_items %}
+{% assign sorted_ibm_portables = filtered | sort: "released" %}
 {% for item in sorted_ibm_portables %}
   <a href="{{ item.url | relative_url }}">{{ item.title }} ({{ item.class }}-class, released in {{ item.released }})</a>
   {% if item.documented != 'done' %} <em> — documentation in progress</em> {% endif %}
