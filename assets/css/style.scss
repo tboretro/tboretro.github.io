@@ -8,7 +8,8 @@
 /* No bullet points and margins in lists on main page */
 
 .page-index ul,
-.page-index ol {
+.page-index ol,
+.page-index li {
   list-style: none;   // keine Punkte
   margin-top: 0.25em;   /* small top spacing */
   margin-bottom: 0.25em; /* small bottom spacing */
