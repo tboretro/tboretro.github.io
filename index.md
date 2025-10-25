@@ -5,23 +5,23 @@ This is just a space to keep track of my collection of retro computer stuff
 ## Home Computers
 
 {% include collection_list.html 
-   collections=["home_computers"] 
-   sort_fields=["released","class"] 
-   progress_values=["started","done"] %}
+   collections="home_computers" 
+   sort_fields="released" 
+   progress_values="started,done" %}
 
 ## IBM Compatible
 
 {% include collection_list.html 
-   collections=["ibm_compatibles"] 
-   sort_fields=["released","class"] 
-   progress_values=["started","done"] %}
+   collections="ibm_compatibles" 
+   sort_fields="released,class" 
+   progress_values="started,done" %}
 
 ## IBM Portables
 
 {% include collection_list.html 
-   collections=["ibm_portables"] 
-   sort_fields=["released","class"] 
-   progress_values=["started","done"] %}
+   collections="ibm_portables" 
+   sort_fields="released,class" 
+   progress_values="started,done" %}
 
 ## Game Consoles
 
