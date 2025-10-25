@@ -27,7 +27,8 @@
   {% for item in sorted_items %}
     <li>
       {% assign display_text = item.title %}
-      {%- assign info_parts = "" | split: "" -%}  {# create empty array #}
+      {% comment %} create empty array: {% endcomment %}
+      {%- assign info_parts = "" | split: "" -%}
 
       {%- if item.released -%}
         {% assign info_parts = info_parts | push: "released in " | append: item.released %}
