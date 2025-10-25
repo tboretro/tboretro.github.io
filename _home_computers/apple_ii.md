@@ -2,7 +2,7 @@
 title: Apple IIc
 released: 1984
 progress: done
-documentation: started
+documented: started
 ---
 
 # {{ page.title }}

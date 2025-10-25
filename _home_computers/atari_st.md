@@ -2,7 +2,7 @@
 title: Atari ST
 released: 1986
 progress: done
-documentation: done
+documented: done
 ---
 
 # {{ page.title }}

@@ -8,8 +8,8 @@ collections:
     output: true
   ibm_compatibles:
     output: true
-#  ibm_portables:
-#    output: true  # Do not forget to add new collections to the defaults below!
+  ibm_portables:
+    output: true  # Do not forget to add new collections to the defaults below!
 
 defaults:
   - scope:
@@ -27,8 +27,8 @@ defaults:
       type: "ibm_compatibles"
     values:
       layout: "tboretro"
- # - scope:
- #     path: ""      # site-wide
- #     type: "ibm_portables"
- #   values:
- #     layout: "tboretro"      
+  - scope:
+      path: ""      # site-wide
+      type: "ibm_portables"
+    values:
+      layout: "tboretro"      

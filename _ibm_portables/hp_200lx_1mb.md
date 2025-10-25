@@ -3,7 +3,7 @@ title: HP 200LX 1MB
 class: 186
 released: 1994
 progress: started
-documentation: stub
+documented: stub
 ---
 
 # {{ page.title }}

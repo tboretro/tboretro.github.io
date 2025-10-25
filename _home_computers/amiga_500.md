@@ -2,7 +2,7 @@
 title: Amiga 500
 released: 1987
 progress: done
-documentation: done
+documented: done
 ---
 
 # {{ page.title }}
