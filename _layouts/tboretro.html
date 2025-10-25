@@ -3,10 +3,8 @@ layout: default
 ---
 
 <!-- set class to reference in css -->
-<div class="{% if page.url == '/' %}page-index{% else %}page-{{ page.slug | default: page.title | slugify }}{% endif %}">
-
+<div class="{% if page.collection %}collection-{{ page.collection }}{% else %}page-index{% endif %}">
   {{ content }}
-
 </div>
 
 <script>
