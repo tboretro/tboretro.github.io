@@ -43,7 +43,8 @@
       {%- endif -%}
 
       {%- if info_parts.size > 0 -%}
-        {% assign display_text = display_text | append: " (" | append: info_parts | join: ", " | append: ")" %}
+        {% assign info_text = info_parts | join: ", " %}
+        {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
       {%- endif -%}
 
       {% if item.documented == "stub" %}
