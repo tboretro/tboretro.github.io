@@ -34,11 +34,12 @@ This is just a space to keep track of my collection of retro computer stuff
 {% assign sorted_ibm_portables = filtered | sort: "released" %}
 <ul>
 {% for item in sorted_ibm_portables %}
+  {% assign display_text = item.title | append: " (" | append: item.class | append: "-class, released in " | append: item.released | append: ")" %}
   <li>
   {% if item.documented == "stub" %}
-    {{ item.title }} <em>— documentation pending</em>
+    {{ display_text }} <em>— documentation pending</em>
   {% else %}
-    <a href="{{ item.url | relative_url }}">{{ item.title }} ({{ item.class }}-class, released in {{ item.released }})</a>
+    <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
     {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
   {% endif %}
   </li>
