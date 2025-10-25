@@ -1,45 +1,51 @@
 ---
 ---
 
-@import "{{ site.theme }}";  // This pulls in the entire theme’s default CSS
+@import "{{ site.theme }}";  // Import the theme first
 
-/* Now changes to this default style: */
+/* -----------------------------
+   Homepage: .page-index
+   ----------------------------- */
 
-/* No bullet points and margins in lists on main page */
-
+/* List containers on homepage */
 html body div.page-index ul,
 html body div.page-index ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none;    // no bullets
+  margin: 0;           // remove container margins
+  padding: 0;          // remove container padding
 }
 
+/* List items on homepage */
 html body div.page-index ul li,
 html body div.page-index ol li {
-  padding: 0;
-  margin: 0.5em 0;
+  margin: 0.5em 0;     // spacing between items
+  padding: 0;          // remove padding
+  line-height: 1.4;
 }
 
-/* Compact, uniform list spacing (works for nested lists too) on all other pages */
+/* -----------------------------
+   All collections: automatically detected
+   ----------------------------- */
 
-/* Reset margins for the list containers */
-div:not(.page-index) ul,
-div:not(.page-index) ol {
-  margin-top: 0.25em;   /* small top spacing */
-  margin-bottom: 0.25em; /* small bottom spacing */
-  padding-left: 1.2em;  /* standard indent */
+/* Container lists for all collections */
+html body div[class^="collection-"] ul,
+html body div[class^="collection-"] ol {
+  margin-top: 0.25em;   // small spacing above list
+  margin-bottom: 0.25em; // small spacing below list
+  padding-left: 1.2em;  // standard indent
 }
 
-/* Keep nested lists visually close to their parent item */
-div:not(.page-index) ul ul,
-div:not(.page-index) ol ol {
+/* Nested lists in collections */
+html body div[class^="collection-"] ul ul,
+html body div[class^="collection-"] ol ol {
+  padding-left: 1.2em; // indent sublists
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
 
-/* Tighter spacing between bullet points */
-div:not(.page-index) li {
+/* List items in collections */
+html body div[class^="collection-"] li {
   margin-top: 0.1em;
   margin-bottom: 0.1em;
-  line-height: 1.4; /* keeps text readable */
+  line-height: 1.4;
 }
