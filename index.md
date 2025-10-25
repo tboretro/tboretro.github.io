@@ -29,7 +29,7 @@ This is just a space to keep track of my collection of retro computer stuff
 ## IBM Portables
 
 {% assign sorted_ibm_portables = site.ibm_portables | sort: "released" | sort: "class" %}
-{% for item in sorted_ibm_cosorted_ibm_portablesmpatibles %}
+{% for item in sorted_ibm_portables %}
   <a href="{{ item.url | relative_url }}">{{ item.title }} ({{ item.class }}-class, released in {{ item.released }})</a>
   {% if item.documented != 'done' %} <em> — documentation in progress</em> {% endif %}
   <br>
