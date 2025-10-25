@@ -1,58 +1,45 @@
 ---
 ---
 
-@import "{{ site.theme }}";  // Import the theme first
+@import "{{ site.theme }}";  // This pulls in the entire theme’s default CSS
 
-/* -----------------------------
-   Homepage: .page-index
-   ----------------------------- */
+/* Now changes to this default style: */
 
-/* List containers */
+/* No bullet points and margins in lists on main page */
+
 html body div.page-index ul,
 html body div.page-index ol {
-  list-style: none;    // no bullets
-  margin: 0;           // remove container margins
-  padding: 0;          // remove container padding
-}
-
-/* List items */
-html body div.page-index ul li,
-html body div.page-index ol li {
-  margin: 0.5em 0;     // space between items
-  padding: 0;          // remove padding
-  line-height: 1.4;
-}
-
-/* Nested lists slightly indented */
-html body div.page-index ul ul,
-html body div.page-index ol ol {
-  padding-left: 1.2em; // slightly indent sublists
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-/* -----------------------------
-   Subpages: everything except .page-index
-   ----------------------------- */
-
-/* List containers */
-html body div:not(.page-index) ul,
-html body div:not(.page-index) ol {
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-  padding-left: 1.2em; /* standard indent */
+html body div.page-index ul li,
+html body div.page-index ol li {
+  padding: 0;
+  margin: 0.5em 0;
 }
 
-/* Nested lists */
-html body div:not(.page-index) ul ul,
-html body div:not(.page-index) ol ol {
+/* Compact, uniform list spacing (works for nested lists too) on all other pages */
+
+/* Reset margins for the list containers */
+div:not(.page-index) ul,
+div:not(.page-index) ol {
+  margin-top: 0.25em;   /* small top spacing */
+  margin-bottom: 0.25em; /* small bottom spacing */
+  padding-left: 1.2em;  /* standard indent */
+}
+
+/* Keep nested lists visually close to their parent item */
+div:not(.page-index) ul ul,
+div:not(.page-index) ol ol {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
-  padding-left: 1.2em;
 }
 
-/* List items */
-html body div:not(.page-index) li {
+/* Tighter spacing between bullet points */
+div:not(.page-index) li {
   margin-top: 0.1em;
   margin-bottom: 0.1em;
-  line-height: 1.4;
+  line-height: 1.4; /* keeps text readable */
 }
