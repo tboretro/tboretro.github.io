@@ -32,12 +32,14 @@
       {% comment %} create empty array: {% endcomment %}
       {%- assign info_parts = "" | split: "" -%}
 
-      {%- if item.released -%}
-        {% assign info_parts = info_parts | push: "released in " | append: item.released %}
+      {%- if item.class -%}
+        {% assign class_str = item.class | append: "-class" %}
+        {% assign info_parts = info_parts | push: class_str %}
       {%- endif -%}
 
-      {%- if item.class -%}
-        {% assign info_parts = info_parts | push: item.class | append: "-class" %}
+      {%- if item.released -%}
+        {% assign released_str = "released in " | append: item.released %}
+        {% assign info_parts = info_parts | push: released_str %}
       {%- endif -%}
 
       {%- if info_parts.size > 0 -%}
