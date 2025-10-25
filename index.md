@@ -31,7 +31,7 @@ This is just a space to keep track of my collection of retro computer stuff
 {% assign started_items = site.ibm_portables | where: "progress", "started" %}
 {% assign done_items = site.ibm_portables | where: "progress", "done" %}
 {% assign filtered = started_items | concat: done_items %}
-{% assign sorted_ibm_portables = filtered | sort: "released" %}
+{% assign sorted_ibm_portables = filtered | sort: "released" | sort: "class" %}
 <ul>
 {% for item in sorted_ibm_portables %}
   {% assign display_text = item.title %}
