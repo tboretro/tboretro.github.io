@@ -2,10 +2,11 @@
 layout: default
 ---
 
-// Set body class to make switching on this in css possible
-<body class="{% if page.url == '/' %}page-index{% else %}page-{{ page.slug | default: page.title | slugify }}{% endif %}">
+<div class="{% if page.url == '/' %}page-index{% else %}page-{{ page.slug | default: page.title | slugify }}{% endif %}">
 
-{{ content }}
+  {{ content }}
+
+</div>
 
 <script>
   // Script to make all external links open in a new tab
