@@ -1,19 +1,49 @@
-<ul>
-{% for item in include.items %}
-  {% assign display_text = item.title %}
-  {% if item.class %}
-    {% assign display_text = display_text | append: " (" | append: item.class | append: "-class, released in " | append: item.released | append: ")" %}
-  {% else %}
-    {% assign display_text = display_text | append: " (released in " | append: item.released | append: ")" %}
-  {% endif %}
+{% comment %}
+  Include expects:
+    - collections: array of collection names (e.g., ["home_computers", "ibm_portables"])
+    - progress_values: optional array of progress values to include (default: ["done"])
+    - sort_fields: optional array of fields to sort by (default: ["released"])
+{% endcomment %}
 
-  <li>
-    {% if item.documented == "stub" %}
-      {{ display_text }} <em>— documentation pending</em>
+{% assign progress_values = include.progress_values | default: ["done"] %}
+{% assign sort_fields = include.sort_fields | default: ["released"] %}
+
+{% for collection_name in include.collections %}
+
+  {% assign collection_items = site[collection_name] %}
+
+  {%- comment -%} Filter by progress dynamically {%- endcomment -%}
+  {% assign filtered_items = "" | split: "" %}
+  {% for value in progress_values %}
+    {% assign matching_items = collection_items | where: "progress", value %}
+    {% assign filtered_items = filtered_items | concat: matching_items %}
+  {% endfor %}
+
+  {%- comment -%} Sort by multiple fields {%- endcomment -%}
+  {% assign sorted_items = filtered_items %}
+  {% for field in sort_fields %}
+    {% assign sorted_items = sorted_items | sort: field %}
+  {% endfor %}
+
+  <h2>{{ collection_name | replace: "_", " " | capitalize }}</h2>
+  <ul>
+  {% for item in sorted_items %}
+    {% assign display_text = item.title %}
+    {% if item.class %}
+      {% assign display_text = display_text | append: " (" | append: item.class | append: "-class, released in " | append: item.released | append: ")" %}
     {% else %}
-      <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-      {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+      {% assign display_text = display_text | append: " (released in " | append: item.released | append: ")" %}
     {% endif %}
-  </li>
+
+    <li>
+      {% if item.documented == "stub" %}
+        {{ display_text }} <em>— documentation pending</em>
+      {% else %}
+        <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
+        {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+
 {% endfor %}
-</ul>
