@@ -8,12 +8,17 @@
 /* No bullet points and margins in lists on main page */
 
 .page-index ul,
-.page-index ol,
+.page-index ol {
+  list-style: none;  
+  padding-left: 0;   /* Einzug komplett entfernen */
+  margin-top: 0;      /* optional */
+  margin-bottom: 0;   /* optional */
+}
+
 .page-index li {
-  list-style: none;   // keine Punkte
-  margin-top: 0.25em;   /* small top spacing */
-  margin-bottom: 0.25em; /* small bottom spacing */
-  padding-left: 0;    // optional: Einzug entfernen
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  padding-left: 0;    /* falls li Padding hat */
 }
 
 /* Compact, uniform list spacing (works for nested lists too) on all other pages */
