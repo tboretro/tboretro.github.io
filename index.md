@@ -35,7 +35,7 @@ This is just a space to keep track of my collection of retro computer stuff
 {% include collection_list.html 
    collections="home_computers, ibm_compatibles, ibm_portables" 
    sort_fields="released" 
-   progress_values="pile" %}
+   progress_values="pile,blub" %}
 
 ## Interals / To-Dos
 
