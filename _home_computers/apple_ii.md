@@ -9,7 +9,9 @@ documented: started
 
 ## Information
 
-Model: TODO
+Model: Apple II C
+
+Case Serial Number: 2A2S4 - 019343
 
 Board Revision: TODO
 

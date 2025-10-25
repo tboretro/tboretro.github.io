@@ -7,17 +7,17 @@
 
 /* No bullet points and margins in lists on main page */
 
-.page-index ul,
-.page-index ol {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+html body div.page-index ul,
+html body div.page-index ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.page-index ul li,
-.page-index ol li {
-  padding: 0 !important;
-  margin: 0.5em 0 !important;
+html body div.page-index ul li,
+html body div.page-index ol li {
+  padding: 0;
+  margin: 0.5em 0;
 }
 
 /* Compact, uniform list spacing (works for nested lists too) on all other pages */
