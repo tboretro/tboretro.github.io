@@ -33,9 +33,12 @@ This is just a space to keep track of my collection of retro computer stuff
 {% assign filtered = started_items | concat: done_items %}
 {% assign sorted_ibm_portables = filtered | sort: "released" %}
 {% for item in sorted_ibm_portables %}
-  <a href="{{ item.url | relative_url }}">{{ item.title }} ({{ item.class }}-class, released in {{ item.released }})</a>
-  {% if item.documented != 'done' %} <em> — documentation in progress</em> {% endif %}
-  <br>
+  {% if item.documented == "stub" %}
+    {{ item.title }} <em>— documentation pending</em>
+  {% else %}
+    <a href="{{ item.url | relative_url }}">{{ item.title }} ({{ item.class }}-class, released in {{ item.released }})</a>
+    {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+  {% endif %}
 {% endfor %}
 
 ## Game Consoles
