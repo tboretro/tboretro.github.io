@@ -1,5 +1,5 @@
 ---
-title: HP 200LX 1MB
+title: HP 200LX 2MB
 class: 186
 released: 1994
 progress: started

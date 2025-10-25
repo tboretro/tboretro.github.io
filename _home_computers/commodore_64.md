@@ -1,6 +1,8 @@
 ---
 title: Commodore 64
 released: 1982
+progress: done
+documentation: done
 ---
 
 # {{ page.title }}

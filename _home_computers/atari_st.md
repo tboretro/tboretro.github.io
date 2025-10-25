@@ -1,6 +1,8 @@
 ---
 title: Atari ST
 released: 1986
+progress: done
+documentation: done
 ---
 
 # {{ page.title }}
@@ -15,6 +17,7 @@ Board Revision: C070859-001
 
 ## Original Peripherals
 
+* Monitor SM124
 * Mouse STM1
 
 ## Modern Additions/Mods
