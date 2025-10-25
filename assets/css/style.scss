@@ -9,15 +9,15 @@
 
 .page-index ul,
 .page-index ol {
-  list-style: none;
-  padding: 0;   /* Einzug entfernen */
-  margin: 0;         /* Container-Margins auf 0 */
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .page-index ul li,
 .page-index ol li {
-  padding: 0;
-  margin: 0.5em 0; /* Abstand oben und unten */
+  padding: 0 !important;
+  margin: 0.5em 0 !important;
 }
 
 /* Compact, uniform list spacing (works for nested lists too) on all other pages */
