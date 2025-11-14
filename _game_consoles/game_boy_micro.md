@@ -2,7 +2,7 @@
 title: Nintendo Game Boy Micro
 released: 2005
 progress: done
-documented: done
+documented: started
 ---
 
 # {{ page.title }}
@@ -11,9 +11,20 @@ documented: done
 
 Model: Nintendo Game Boy Micro (silber)
 
+Serial Number: MEH10034396
+
+## Also plays
+
+* Game Boy
+* Game Boy Color
+* Game Boy Advance
+
 ## Original Peripherals
 
 ## Modern Additions/Mods
+
+* added USB charging cable
+* added EZ-FLASH Omega
 
 ## Links
 
