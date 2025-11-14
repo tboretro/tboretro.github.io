@@ -2,7 +2,7 @@
 title: Nintendo DS Lite
 released: 2006
 progress: done
-documented: started
+documented: done
 ---
 
 # {{ page.title }}

@@ -2,7 +2,7 @@
 title: Sony Playstation Portable
 released: 2008
 progress: done
-documented: started
+documented: done
 ---
 
 # {{ page.title }}
@@ -17,6 +17,7 @@ Serial Number: AC0050518
 
 * added USB charging cable
 * added microSD adapter
+* installed ARK-4 r180 custom firmware
 
 ## Links
 
