@@ -1,5 +1,5 @@
 ---
-title: Nintendo Game and Watch - Super Mario Bros.
+title: Nintendo Game & Watch - Super Mario Bros.
 released: 2020
 progress: done
 documented: done
