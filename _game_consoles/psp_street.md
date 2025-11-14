@@ -13,10 +13,6 @@ Model: Sony Playstation Portable (PSP-E1004) (white)
 
 Serial Number: AC7231130
 
-## Also plays
-
-## Original Peripherals
-
 ## Modern Additions/Mods
 
 * added USB charging cable

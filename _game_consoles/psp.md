@@ -13,10 +13,6 @@ Model: Sony Playstation Portable (PSP-3004) (black)
 
 Serial Number: AC0050518
 
-## Also plays
-
-## Original Peripherals
-
 ## Modern Additions/Mods
 
 * added USB charging cable

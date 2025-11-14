@@ -13,10 +13,6 @@ Model: Sony Playstation Portable (PSP-N1004) (black)
 
 Serial Number: HC0075050
 
-## Also plays
-
-## Original Peripherals
-
 ## Modern Additions/Mods
 
 * added USB charging cable

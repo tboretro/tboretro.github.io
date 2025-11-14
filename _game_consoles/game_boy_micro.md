@@ -19,8 +19,6 @@ Serial Number: MEH10034396
 * Game Boy Color
 * Game Boy Advance
 
-## Original Peripherals
-
 ## Modern Additions/Mods
 
 * added USB charging cable
