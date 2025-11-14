@@ -1,5 +1,5 @@
 ---
-title: Nintendo Game & Watch: The Legend of Zelda
+title: Nintendo Game & Watch - The Legend of Zelda
 released: 2020
 progress: done
 documented: done
