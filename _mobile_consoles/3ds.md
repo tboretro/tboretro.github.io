@@ -1,6 +1,6 @@
 ---
-title: New Nintendo 3DS Xl
-released: 2006
+title: New Nintendo 3DS XL
+released: 2014
 progress: done
 documented: done
 ---
@@ -9,7 +9,7 @@ documented: done
 
 ## Information
 
-Model: New Nintendo 3DS Xl (metallic black)
+Model: New Nintendo 3DS XL (metallic black)
 
 Serial Number: QEF103962731
 
