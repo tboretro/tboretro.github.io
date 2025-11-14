@@ -37,6 +37,7 @@ Board Revision: 6A, which includes an ECS Agnus chip
   * With added [audio support board](https://github.com/hoglet67/RGBtoHDMI/wiki/Audio)
 * Upgrade mouse to [optical](https://amigastore.eu/en/559-laser-upgrade-for-amiga-mice.html)
 * Switched to Gotek with [Flash Floppy](https://github.com/keirf/flashfloppy) 
+* Switched to [PowerShark](https://retrousbpower.com/) 
 
 ## Links
 

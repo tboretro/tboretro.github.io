@@ -26,14 +26,14 @@ This is just a space to keep track of my collection of retro computer stuff
 ## Game Consoles
 
 {% include collection_list.html 
-   collections="consoles" 
+   collections="game_consoles" 
    sort_fields="released" 
    progress_values="started,done" %}
 
 ## Pile of To Do
 
 {% include collection_list.html 
-   collections="home_computers, ibm_compatibles, ibm_portables" 
+   collections="home_computers,ibm_compatibles,ibm_portables,game_consoles" 
    sort_fields="released" 
    progress_values="pile" %}
 
@@ -44,7 +44,7 @@ This is just a space to keep track of my collection of retro computer stuff
 * Maybe add hifi setup
 
 * Status of 
-** progress: pile, started, done
-** documented: stub, started, done
+  * progress: pile, started, done
+  * documented: stub, started, done
 
 * Add photo gallery (see ChatGPT chat for ideas how to)
