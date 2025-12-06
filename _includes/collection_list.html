@@ -22,7 +22,7 @@ Include expects:
   {% endfor %}
 
   {%- comment -%}
-    Enrich items with a single stable sort_key:
+    Enrich items with a stable sort_key:
     - combine all configured sort fields
     - append order (default 1) as tie-breaker
   {%- endcomment -%}
@@ -33,11 +33,11 @@ Include expects:
     {% assign key_parts = "" | split: "" %}
 
     {% for field in sort_fields %}
-      {% assign field_value = item[field] | default: "" | append: "" %}
+      {% assign field_value = item[field] | default: "" %}
       {% assign key_parts = key_parts | push: field_value %}
     {% endfor %}
 
-    {% assign order_value = item.order | default: 1 | append: "" %}
+    {% assign order_value = item.order | default: 1 %}
     {% assign key_parts = key_parts | push: order_value %}
 
     {% assign sort_key = key_parts | join: "||" %}
@@ -50,24 +50,26 @@ Include expects:
   <ul>
   {% for item in sorted_items %}
     <li>
-      {%- comment -%} Build display text with class and released info {%- endcomment -%}
-      {%- assign info_parts = "" | split: "" -%}
+      {%- comment -%} Build display text cleanly {%- endcomment -%}
+      {% assign info_parts = "" | split: "" %}
 
-      {%- if item.class -%}
+      {% if item.class %}
+        {% assign info_parts = info_parts | push: item.class | append: "-class" %}
         {% assign class_str = item.class | append: "-class" %}
         {% assign info_parts = info_parts | push: class_str %}
-      {% endif -%}
+      {% endif %}
 
-      {%- if item.released -%}
+      {% if item.released %}
         {% assign released_str = "released in " | append: item.released %}
         {% assign info_parts = info_parts | push: released_str %}
-      {% endif -%}
+      {% endif %}
 
-      {%- if info_parts.size > 0 -%}
-        {% assign display_text = item.title | append: " (" | append: info_parts | join: ", " | append: ")" %}
-      {%- else -%}
+      {% if info_parts.size > 0 %}
+        {% assign info_text = info_parts | join: ", " %}
+        {% assign display_text = item.title | append: " (" | append: info_text | append: ")" %}
+      {% else %}
         {% assign display_text = item.title %}
-      {%- endif -%}
+      {% endif %}
 
       {% if item.documented == "stub" %}
         {{ display_text }} <em>— documentation pending</em>
