@@ -10,9 +10,9 @@ collections:
     output: true
   ibm_portables:
     output: true
-  game_consoles:
+  consoles:
     output: true
-  mobile_consoles:
+  consoles_mobile:
     output: true  # Do not forget to add new collections to the defaults below!
 
 
@@ -39,11 +39,11 @@ defaults:
       layout: "tboretro"             
   - scope:
       path: ""      # site-wide
-      type: "game_consoles"
+      type: "consoles"
     values:
       layout: "tboretro"      
   - scope:
       path: ""      # site-wide
-      type: "mobile_consoles"
+      type: "consoles_mobile"
     values:
       layout: "tboretro"            

@@ -26,14 +26,14 @@ This is just a space to keep track of my collection of retro computer stuff
 ## Game Consoles
 
 {% include collection_list.html 
-   collections="game_consoles" 
+   collections="consoles" 
    sort_fields="released" 
    progress_values="started,done" %}
 
 ## Mobile Game Consoles
 
 {% include collection_list.html 
-   collections="mobile_consoles" 
+   collections="consoles_mobile" 
    sort_fields="released" 
    progress_values="started,done" %}
 

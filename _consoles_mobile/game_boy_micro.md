@@ -9,7 +9,7 @@ documented: done
 
 ## Information
 
-Model: Nintendo Game Boy Micro (silber)
+Model: Nintendo Game Boy Micro (silver)
 
 Serial Number: MEH10034396
 
