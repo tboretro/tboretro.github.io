@@ -14,22 +14,26 @@
     {% endif %}
   {% endfor %}
 
-  {% comment %} Build enriched items with sort_key {% endcomment %}
+  {% comment %} Build sort_key as simple string {% endcomment %}
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
-    {% assign key_parts = "" | split: "" %}
+    {% assign sort_key = "" %}
 
     {% for field in sort_fields %}
       {% assign val = item[field] | default: "" %}
       {% assign val = val | append: "                    " %} {# pad with spaces for lex sort #}
-      {% assign key_parts = key_parts | push: val %}
+      {% assign sort_key = sort_key | append: val %}
     {% endfor %}
 
     {% assign order_val = item.order | default: 5 %}
-    {% assign key_parts = key_parts | push: order_val %}
+    {% if order_val < 10 %}
+      {% assign order_val_str = "0" | append: order_val %}
+    {% else %}
+      {% assign order_val_str = order_val %}
+    {% endif %}
+    {% assign sort_key = sort_key | append: order_val_str %}
 
-    {% assign sort_key = key_parts | join: "||" %}
     {% assign item = item | merge: { "sort_key": sort_key } %}
     {% assign enriched_items = enriched_items | push: item %}
   {% endfor %}
@@ -47,15 +51,21 @@
         {% assign info_parts = info_parts | push: "released in " | append: item.released %}
       {% endif %}
 
+      {% assign info_text = "" %}
       {% if info_parts.size > 0 %}
         {% assign info_text = info_parts | join: ", " %}
-        {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "] (" | append: info_text | append: ")" %}
-      {% else %}
-        {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "]" %}
       {% endif %}
 
+      {% assign display_text = item.title %}
+      {% if info_text != "" %}
+        {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
+      {% endif %}
+
+      {# Debug: show sort_key #}
+      {{ display_text }} [sort_key={{ item.sort_key }}] 
+
       {% if item.documented == "stub" %}
-        {{ display_text }} <em>— documentation pending</em>
+        <em>— documentation pending</em>
       {% else %}
         <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
         {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
