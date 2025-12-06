@@ -57,7 +57,7 @@
   <ul>
   {% for item in sorted_items %}
     <li>
-      {% assign display_text = item.title | append item.sort_key %}
+      {% assign display_text = item.title | append: item.sort_key %}
       {% comment %} create empty array: {% endcomment %}
       {%- assign info_parts = "" | split: "" -%}
 
