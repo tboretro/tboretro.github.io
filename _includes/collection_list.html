@@ -45,7 +45,7 @@ Include expects:
   <ul>
   {% for item in sorted_items %}
     <li>
-      {% assign display_text = item.title %}
+      {% assign display_text = item.title | append: "["  | append: item.sort_key | append: "]" %}
 
       {%- assign info_parts = "" | split: "" -%}
       {%- if item.class -%}
