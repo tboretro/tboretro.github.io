@@ -12,7 +12,8 @@
 {% for collection_name in collections %}
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
-  
+
+  {%- comment -%} Filter by allowed progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -21,25 +22,37 @@
   {% endfor %}
 
   {%- comment -%}
-    Now enforce "order" sorting at first..
-    We create a helper array of items with normalized "order_value".
+    Build enriched array with a *single* stable sort_key.
+    sort_key = concatenation of the configured fields PLUS the "order" fallback.
   {%- endcomment -%}
 
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
+
+    {%- assign key_parts = "" | split: "" -%}
+
+    {%- comment -%} Append all configured sort fields {%- endcomment -%}
+    {% for field in sort_fields %}
+      {% assign value = item[field] | default: "" %}
+      {% assign key_parts = key_parts | push: value %}
+    {% endfor %}
+
+    {%- comment -%} Append normalized order_value (fallback=1) as final tiebreaker {%- endcomment -%}
     {% assign order_value = item.order | default: 1 %}
-    {% assign item = item | merge: {"order_value": order_value } %}
-    {% assign enriched_items = enriched_items | push: item %}
+    {% assign key_parts = key_parts | push: order_value %}
+
+    {%- comment -%} Construct final sort key (string) {%- endcomment -%}
+    {% assign sort_key = key_parts | join: "||" %}
+
+    {%- comment -%} Merge key into item {%- endcomment -%}
+    {% assign enriched_item = item | merge: { "sort_key": sort_key } %}
+
+    {% assign enriched_items = enriched_items | push: enriched_item %}
   {% endfor %}
 
-  {%- comment -%} First sorting step: sort by normalized order_value {%- endcomment -%}
-  {% assign ordered_items = enriched_items | sort: "order_value" %}
-
-  {% assign sorted_items = ordered_items %}
-  {% for field in sort_fields %}
-    {% assign sorted_items = sorted_items | sort: field %}
-  {% endfor %}
+  {%- comment -%} Final stable sort using the combined key {%- endcomment -%}
+  {% assign sorted_items = enriched_items | sort: "sort_key" %}
 
   <ul>
   {% for item in sorted_items %}
