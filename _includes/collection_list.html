@@ -6,6 +6,7 @@
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
 
+  {%- comment -%} Filter by allowed progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -13,6 +14,7 @@
     {% endif %}
   {% endfor %}
 
+  {%- comment -%} Build enriched array with simple stable sort_key {%- endcomment -%}
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
@@ -20,18 +22,13 @@
 
     {% for field in sort_fields %}
       {% assign val = item[field] | default: "" %}
-      {% comment %}
-        If numeric, pad to 10 digits with leading zeros
-      {% endcomment %}
-      {% if val != "" and val matches '^\d+$' %}
-        {% assign val = "%010d" | format: val %}
-      {% endif %}
+      {% comment %} pad string with spaces to make length uniform {% endcomment %}
+      {% assign val = val | append: "                    " %}
       {% assign key_parts = key_parts | push: val %}
     {% endfor %}
 
-    {% comment %} Append order as tie-breaker, padded 10 digits {% endcomment %}
-    {% assign order_val = item.order | default: 1 %}
-    {% assign order_val = "%010d" | format: order_val %}
+    {% comment %} Append order as tie-breaker (default=5) {% endcomment %}
+    {% assign order_val = item.order | default: 5 %}
     {% assign key_parts = key_parts | push: order_val %}
 
     {% assign sort_key = key_parts | join: "||" %}
@@ -46,7 +43,6 @@
     <li>
       {% assign info_parts = "" | split: "" %}
       {% if item.class %}
-        {% assign info_parts = info_parts | push: item.class | append: "-class" %}
         {% assign class_str = item.class | append: "-class" %}
         {% assign info_parts = info_parts | push: class_str %}
       {% endif %}
