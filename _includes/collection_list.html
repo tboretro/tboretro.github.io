@@ -53,9 +53,9 @@
 
       {% if info_parts.size > 0 %}
         {% assign info_text = info_parts | join: ", " %}
-        {% assign display_text = item.title | append: " (" | append: info_text | append: ")" %}
+        {% assign display_text = item.title | append: " - " | append: item.sort_key | append: " (" | append: info_text | append: ")" %}
       {% else %}
-        {% assign display_text = item.title %}
+        {% assign display_text = item.title | append: " - " | append: item.sort_key %}
       {% endif %}
 
       {% if item.documented == "stub" %}
