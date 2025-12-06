@@ -1,3 +1,10 @@
+{% comment %}
+Include expects:
+  - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
+  - progress_values: comma-separated progress values to include (default: "done")
+  - sort_fields: comma-separated fields to sort by (default: "released")
+{% endcomment %}
+
 {% assign collections = include.collections | split: "," %}
 {% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
@@ -6,6 +13,7 @@
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
 
+  {%- comment -%} Filter by allowed progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -13,45 +21,54 @@
     {% endif %}
   {% endfor %}
 
+  {%- comment -%}
+    Build enriched array with sort_key for stable sorting.
+    sort_key = concatenation of configured fields + normalized 'order' (default 5)
+  {%- endcomment -%}
+
   {% assign enriched_items = "" | split: "" %}
+
   {% for item in filtered_items %}
     {% assign key_parts = "" | split: "" %}
+    
     {% for field in sort_fields %}
       {% assign val = item[field] | default: "" %}
       {% assign val = val | append: "                    " %}
       {% assign key_parts = key_parts | push: val %}
     {% endfor %}
+
     {% assign order_val = item.order | default: 5 %}
     {% assign key_parts = key_parts | push: order_val %}
+
     {% assign sort_key = key_parts | join: "||" %}
 
-    {# Instead of merging into item, store a small object with original item + sort_key #}
-    {% assign enriched_items = enriched_items | push: { "item": item, "sort_key": sort_key } %}
+    {%- comment -%} Store as JSON string (Jekyll 3.x compatible) {%- endcomment -%}
+    {% assign enriched_item = '{"url":"'+ item.url +'","title":"'+ item.title +'","class":"'+ item.class +'","released":"'+ item.released +'","documented":"'+ item.documented +'","sort_key":"'+ sort_key +'"}' %}
+    {% assign enriched_items = enriched_items | push: enriched_item %}
   {% endfor %}
 
-  {% assign sorted_items = enriched_items | sort: "sort_key" %}
+  {%- comment -%} Sort items lexicographically by sort_key {%- endcomment -%}
+  {% assign sorted_items = enriched_items | sort %}
 
   <ul>
-  {% for entry in sorted_items %}
-    {% assign item = entry.item %}
-    {% assign sort_key = entry.sort_key %}
-
-    {# Debug output of sort_key #}
-    {% assign display_text = item.title | append: " - [" | append: sort_key | append: "]" %}
+  {% for item_json in sorted_items %}
+    {% assign item = item_json | replace: '=>', ':' | jsonify | replace: '\\"', '"' | replace: '\\', '' | parse_json %}
 
     {% assign info_parts = "" | split: "" %}
-    {% if item.class %}
+    {% if item.class != "" %}
       {% assign class_str = item.class | append: "-class" %}
       {% assign info_parts = info_parts | push: class_str %}
     {% endif %}
-    {% if item.released %}
+    {% if item.released != "" %}
       {% assign released_str = "released in " | append: item.released %}
       {% assign info_parts = info_parts | push: released_str %}
     {% endif %}
 
     {% if info_parts.size > 0 %}
       {% assign info_text = info_parts | join: ", " %}
-      {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
+      {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "] (" | append: info_text | append: ")" %}
+    {% else %}
+      {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "]" %}
     {% endif %}
 
     {% if item.documented == "stub" %}
