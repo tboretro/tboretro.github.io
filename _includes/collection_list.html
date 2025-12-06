@@ -20,39 +20,44 @@
     {% assign order_val = item.order | default: "5" %}
 
     {% assign sort_key = released_val | append: class_val | append: order_val %}
-    {% assign enriched_item = item | merge: { "sort_key": sort_key } %}
-    {% assign enriched_items = enriched_items | push: enriched_item %}
+
+    {% assign enriched_items = enriched_items | push: sort_key | push: item %}
   {% endfor %}
 
-  {% assign sorted_items = enriched_items | sort: "sort_key" %}
+  {%- comment -%} Sort by first element (sort_key) of each pair -{%- endcomment -%}
+  {% assign sorted_items = enriched_items | sort %}
 
   <ul>
-  {% for item in sorted_items %}
-    {% assign info_parts = "" | split: "" %}
+  {% for pair in sorted_items %}
+    {% assign item = pair[1] %}
 
-    {% if item.class %}
-      {% assign class_str = item.class | append: "-class" %}
-      {% assign info_parts = info_parts | push: class_str %}
-    {% endif %}
+    <li>
+      {% assign info_parts = "" | split: "" %}
 
-    {% if item.released %}
-      {% assign released_str = "released in " | append: item.released %}
-      {% assign info_parts = info_parts | push: released_str %}
-    {% endif %}
+      {% if item.class %}
+        {% assign class_str = item.class | append: "-class" %}
+        {% assign info_parts = info_parts | push: class_str %}
+      {% endif %}
 
-    {% if info_parts.size > 0 %}
-      {% assign info_text = info_parts | join: ", " %}
-      {% assign display_text = item.title | append: " (" | append: info_text | append: ")" %}
-    {% else %}
-      {% assign display_text = item.title %}
-    {% endif %}
+      {% if item.released %}
+        {% assign released_str = "released in " | append: item.released %}
+        {% assign info_parts = info_parts | push: released_str %}
+      {% endif %}
 
-    {% if item.documented == "stub" %}
-      {{ display_text }} <em>— documentation pending</em>
-    {% else %}
-      <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-      {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
-    {% endif %}
+      {% if info_parts.size > 0 %}
+        {% assign info_text = info_parts | join: ", " %}
+        {% assign display_text = item.title | append: " (" | append: info_text | append: ")" %}
+      {% else %}
+        {% assign display_text = item.title %}
+      {% endif %}
+
+      {% if item.documented == "stub" %}
+        {{ display_text }} <em>— documentation pending</em>
+      {% else %}
+        <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
+        {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+      {% endif %}
+    </li>
   {% endfor %}
   </ul>
 {% endfor %}
