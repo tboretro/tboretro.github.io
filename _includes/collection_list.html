@@ -1,3 +1,10 @@
+{% comment %}
+Include expects:
+  - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
+  - progress_values: comma-separated progress values to include (default: "done")
+  - sort_fields: comma-separated fields to sort by (default: "released")
+{% endcomment %}
+
 {% assign collections = include.collections | split: "," %}
 {% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
@@ -6,7 +13,7 @@
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
 
-  {%- comment -%} Filter by allowed progress values {%- endcomment -%}
+  {%- comment -%} Filter items by allowed progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -14,15 +21,34 @@
     {% endif %}
   {% endfor %}
 
-  {%- comment -%} Build enriched array with simple stable sort_key {%- endcomment -%}
+  {%- comment -%} Build enriched array with sort_key {%- endcomment -%}
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
-    {% assign enriched_item = item | merge: { "sort_key": "abc" } %}
+    {% assign released_val = item.released | default: "0000" %}
+    {% assign class_val = item.class | default: "abcd" %}
+    {% assign order_val = item.order | default: "5" %}
+
+    {% assign sort_key = released_val | append: class_val | append: order_val %}
+
+    {% assign enriched_item = "" | split: "" %}
+    {% assign enriched_item = enriched_item | push: sort_key %}
+    {% assign enriched_item = enriched_item | push: item %}
     {% assign enriched_items = enriched_items | push: enriched_item %}
   {% endfor %}
 
-  {% assign sorted_items = enriched_items | sort: "sort_key" %}
+  {%- comment -%} Sort by sort_key {%- endcomment -%}
+  {% assign sorted_items = "" | split: "" %}
+  {% assign sort_keys = enriched_items | map: "0" | sort %}
+
+  {% for key in sort_keys %}
+    {% for pair in enriched_items %}
+      {% if pair[0] == key %}
+        {% assign sorted_items = sorted_items | push: pair[1] %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
 
   <ul>
   {% for item in sorted_items %}
@@ -39,9 +65,9 @@
 
       {% if info_parts.size > 0 %}
         {% assign info_text = info_parts | join: ", " %}
-        {% assign display_text = item.title | append: " - " | append: item.sort_key | append: " (" | append: info_text | append: ")" %}
+        {% assign display_text = item.title | append: " (" | append: info_text | append: ")" %}
       {% else %}
-        {% assign display_text = item.title | append: " - " | append: item.sort_key %}
+        {% assign display_text = item.title %}
       {% endif %}
 
       {% if item.documented == "stub" %}
