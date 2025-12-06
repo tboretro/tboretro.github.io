@@ -11,19 +11,22 @@ documented: done
 
 Model: Nintendo Wii U GB (black)
 
-Serial Number: QEF10396273FEH103866954
+Serial Number: FEH103866954
 
 MLC Manifacturer: Hynix
 
 ## Also plays
 
-* Nintendo 
+* Nintendo Game Cube
 * Nintendo Wii
+
+## Original Peripherals
+
+* WiiU GamePad (black)
 
 ## Modern Additions/Mods
 
-* added 1TB SSD on USB
-* installed Aroma Beta 14 custom firmware
+* installed Aroma Beta 24 custom firmware
 
 ## Links
 

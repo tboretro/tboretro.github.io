@@ -17,12 +17,22 @@ MLC Manifacturer: Samsung
 
 ## Also plays
 
-* Nintendo 
+* Nintendo Game Cube
 * Nintendo Wii
+
+## Original Peripherals
+
+* WiiU GamePad (black)
+* WiiU Pro Controller (black)
+* 2x Wii Remote Plus (black) with Nunchuk
+* 2X Wii Steering Wheel (black)
+* Wii Bance Board (black)
+* Sensor bar (black)
 
 ## Modern Additions/Mods
 
-* installed Aroma Beta 28 custom firmware
+* added 1TB SSD on USB
+* installed Aroma Beta 14 custom firmware
 
 ## Links
 
