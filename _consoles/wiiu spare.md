@@ -10,7 +10,7 @@ order: 2
 
 ## Information
 
-Model: Nintendo Wii U GB (black)
+Model: Nintendo WiiU 32GB (black)
 
 Serial Number: FEH103866954
 
@@ -31,4 +31,4 @@ MLC Manifacturer: Hynix
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/Wii_U)
+[Wikipedia](https://en.wikipedia.org/wiki/Wii_U)32

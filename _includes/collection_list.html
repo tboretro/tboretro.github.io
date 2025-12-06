@@ -42,8 +42,9 @@
     {% assign order_value = item.order | default: 1 %}
     {% assign key_parts = key_parts | push: order_value %}
 
+    
     {%- comment -%} Construct final sort key (string) {%- endcomment -%}
-    {% assign sort_key = key_parts | join: "||" %}
+    {% assign sort_key = key_parts | join: "||" | append: "" %}
 
     {%- comment -%} Merge key into item {%- endcomment -%}
     {% assign enriched_item = item | merge: { "sort_key": sort_key } %}
@@ -57,7 +58,7 @@
   <ul>
   {% for item in sorted_items %}
     <li>
-      {% assign display_text = item.title | append: item.sort_key %}
+      {% assign display_text = item.title | append: "[" | append: item.sort_key | append: "]" %}
       {% comment %} create empty array: {% endcomment %}
       {%- assign info_parts = "" | split: "" -%}
 
