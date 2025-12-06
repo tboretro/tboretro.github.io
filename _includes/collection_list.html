@@ -27,13 +27,13 @@
 
   {% assign enriched_items = "" | split: "" %}
 
-  {% for item in filtered %}
+  {% for item in filtered_items %}
     {% assign order_value = item.order | default: 1 %}
     {% assign item = item | merge: {"order_value": order_value } %}
     {% assign enriched_items = enriched_items | push: item %}
   {% endfor %}
 
-  {%- comment -%} Final sorting step: sort by normalized order_value {%- endcomment -%}
+  {%- comment -%} First sorting step: sort by normalized order_value {%- endcomment -%}
   {% assign ordered_items = enriched_items | sort: "order_value" %}
 
   {% assign sorted_items = ordered_items %}
