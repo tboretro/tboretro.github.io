@@ -1,11 +1,19 @@
+{% comment %}
+  Include expects:
+    - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
+    - progress_values: comma-separated progress values to include (default: "done")
+    - sort_fields: comma-separated fields to sort by (default: "released")
+{% endcomment %}
+
 {% assign collections = include.collections | split: "," %}
-{% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
+{% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 
 {% for collection_name in collections %}
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
 
+  {%- comment -%} Filter by progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -13,47 +21,55 @@
     {% endif %}
   {% endfor %}
 
-  {%- comment -%} Add a temporary sort_key to each item {%- endcomment -%}
-  {% assign temp_items = "" | split: "" %}
+  {%- comment -%} Build enriched array with combined sort_key (all sort_fields + order) {%- endcomment -%}
+  {% assign enriched_items = "" | split: "" %}
   {% for item in filtered_items %}
     {% assign key_parts = "" | split: "" %}
+    
     {% for field in sort_fields %}
-      {% assign value = item[field] | default: "" %}
-      {% assign key_parts = key_parts | push: value %}
+      {% assign field_value = item[field] | default: "" %}
+      {% assign key_parts = key_parts | push: field_value %}
     {% endfor %}
+    
     {% assign order_value = item.order | default: 1 %}
     {% assign key_parts = key_parts | push: order_value %}
+
     {% assign sort_key = key_parts | join: "||" %}
-    
-    {%- comment -%} Attach sort_key directly to item using merge {%- endcomment -%}
-    {% assign item = item | merge: {"sort_key": sort_key} %}
-    {% assign temp_items = temp_items | push: item %}
+    {% assign enriched_item = item | merge: { "sort_key": sort_key } %}
+    {% assign enriched_items = enriched_items | push: enriched_item %}
   {% endfor %}
 
-  {% assign sorted_items = temp_items | sort: "sort_key" %}
+  {% assign sorted_items = enriched_items | sort: "sort_key" %}
 
   <ul>
   {% for item in sorted_items %}
-    {% assign display_text = item.title %}
-    {% assign info_parts = "" | split: "" %}
-
-    {% if item.class %}
-      {% assign info_parts = info_parts | push: item.class | append: "-class" %}
-    {% endif %}
-    {% if item.released %}
-      {% assign info_parts = info_parts | push: "released in " | append: item.released %}
-    {% endif %}
-
-    {% if info_parts.size > 0 %}
-      {% assign display_text = display_text | append: " (" | append: info_parts | join: ", " | append: ")" %}
-    {% endif %}
-
     <li>
+      {%- comment -%} Build display text {%- endcomment -%}
+      {% assign info_parts = "" | split: "" %}
+
+      {% if item.class %}
+        {% assign class_str = item.class | append: "-class" %}
+        {% assign info_parts = info_parts | push: class_str %}
+      {% endif %}
+
+      {% if item.released %}
+        {% assign released_str = "released in " | append: item.released %}
+        {% assign info_parts = info_parts | push: released_str %}
+      {% endif %}
+
+      {% assign display_text = item.title %}
+      {% if info_parts.size > 0 %}
+        {% assign info_text = info_parts | join: ", " %}
+        {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
+      {% endif %}
+
       {% if item.documented == "stub" %}
         {{ display_text }} <em>— documentation pending</em>
       {% else %}
         <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-        {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+        {% if item.documented != "done" %}
+          <em>— documentation in progress</em>
+        {% endif %}
       {% endif %}
     </li>
   {% endfor %}
