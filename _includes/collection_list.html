@@ -12,7 +12,7 @@
 {% for collection_name in collections %}
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
-
+  
   {%- comment -%} Filter by allowed progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
@@ -22,61 +22,64 @@
   {% endfor %}
 
   {%- comment -%}
-    Build enriched array with a *single* stable sort_key.
-    sort_key = concatenation of the configured fields PLUS the "order" fallback.
+    Build sort keys in parallel array
+    sort_key = concatenation of configured fields + normalized order (fallback=1)
   {%- endcomment -%}
-
-  {% assign enriched_items = "" | split: "" %}
-
+  {% assign sort_keys = "" | split: "" %}
   {% for item in filtered_items %}
-
-    {%- assign key_parts = "" | split: "" -%}
-
-    {%- comment -%} Append all configured sort fields {%- endcomment -%}
+    {% assign key_parts = "" | split: "" %}
     {% for field in sort_fields %}
       {% assign value = item[field] | default: "" %}
       {% assign key_parts = key_parts | push: value %}
     {% endfor %}
-
-    {%- comment -%} Append normalized order_value (fallback=1) as final tiebreaker {%- endcomment -%}
     {% assign order_value = item.order | default: 1 %}
     {% assign key_parts = key_parts | push: order_value %}
-
-    
-    {%- comment -%} Construct final sort key (string) {%- endcomment -%}
-    {% assign sort_key = key_parts | join: "||" | append: "" %}
-
-    {%- comment -%} Merge key into item {%- endcomment -%}
-    {% assign enriched_item = item | merge: { "sort_key": sort_key } %}
-
-    {% assign enriched_items = enriched_items | push: enriched_item %}
+    {% assign sort_key = key_parts | join: "||" %}
+    {% assign sort_keys = sort_keys | push: sort_key %}
   {% endfor %}
 
-  {%- comment -%} Final stable sort using the combined key {%- endcomment -%}
-  {% assign sorted_items = enriched_items | sort: "sort_key" %}
+  {%- comment -%}
+    Sort items by sort_key array
+    Create array of indices according to sorted order_keys
+  {%- endcomment -%}
+  {% assign indices = "" | split: "" %}
+  {% for i in (0..sort_keys.size-1) %}
+    {% assign indices = indices | push: i %}
+  {% endfor %}
+  {% assign sorted_indices = indices | sort: "sort_keys[forloop.index0]" %} <!-- workaround won't work in Liquid -->
+
+  {%- comment -%}
+    Liquid kann leider nicht direkt Array von Indizes sortieren nach parallelem Array.
+    Daher einfacher: wir bauen ein Array von hashes: { "item": item, "key": sort_key } und sortieren das.
+  {%- endcomment -%}
+
+  {% assign enriched_items = "" | split: "" %}
+  {% for idx in (0..filtered_items.size-1) %}
+    {% assign enriched_items = enriched_items | push: {"item": filtered_items[idx], "key": sort_keys[idx]} %}
+  {% endfor %}
+  {% assign sorted_items = enriched_items | sort: "key" %}
 
   <ul>
-  {% for item in sorted_items %}
+  {% for entry in sorted_items %}
+    {% assign item = entry.item %}
+    {%- comment -%} Construct display text {%- endcomment -%}
+    {% assign display_text = item.title %}
+    {%- assign info_parts = "" | split: "" -%}
+
+    {%- if item.class -%}
+      {% assign info_parts = info_parts | push: item.class | append: "-class" %}
+    {%- endif -%}
+
+    {%- if item.released -%}
+      {% assign info_parts = info_parts | push: "released in " | append: item.released %}
+    {%- endif -%}
+
+    {%- if info_parts.size > 0 -%}
+      {% assign info_text = info_parts | join: ", " %}
+      {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
+    {%- endif -%}
+
     <li>
-      {% assign display_text = item.title | append: "[" | append: item.sort_key | append: "]" %}
-      {% comment %} create empty array: {% endcomment %}
-      {%- assign info_parts = "" | split: "" -%}
-
-      {%- if item.class -%}
-        {% assign class_str = item.class | append: "-class" %}
-        {% assign info_parts = info_parts | push: class_str %}
-      {%- endif -%}
-
-      {%- if item.released -%}
-        {% assign released_str = "released in " | append: item.released %}
-        {% assign info_parts = info_parts | push: released_str %}
-      {%- endif -%}
-
-      {%- if info_parts.size > 0 -%}
-        {% assign info_text = info_parts | join: ", " %}
-        {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
-      {%- endif -%}
-
       {% if item.documented == "stub" %}
         {{ display_text }} <em>— documentation pending</em>
       {% else %}
