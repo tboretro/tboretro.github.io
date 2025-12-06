@@ -1,10 +1,3 @@
-{% comment %}
-Include expects:
-  - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
-  - progress_values: comma-separated progress values to include (default: "done")
-  - sort_fields: comma-separated fields to sort by (default: "released")
-{% endcomment %}
-
 {% assign collections = include.collections | split: "," %}
 {% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
@@ -21,19 +14,15 @@ Include expects:
     {% endif %}
   {% endfor %}
 
-  {%- comment -%}
-    Build enriched array with sort_key for stable sorting.
-    sort_key = concatenation of configured fields + normalized 'order' (default 5)
-  {%- endcomment -%}
-
+  {%- comment -%} Build enriched items with sort_key {%- endcomment -%}
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
     {% assign key_parts = "" | split: "" %}
-    
+
     {% for field in sort_fields %}
       {% assign val = item[field] | default: "" %}
-      {% assign val = val | append: "                    " %}
+      {% assign val = val | append: "                    " %} {# pad for lex sort #}
       {% assign key_parts = key_parts | push: val %}
     {% endfor %}
 
@@ -42,41 +31,38 @@ Include expects:
 
     {% assign sort_key = key_parts | join: "||" %}
 
-    {%- comment -%} Store as JSON string (Jekyll 3.x compatible) {%- endcomment -%}
-    {% assign enriched_item = '{"url":"'+ item.url +'","title":"'+ item.title +'","class":"'+ item.class +'","released":"'+ item.released +'","documented":"'+ item.documented +'","sort_key":"'+ sort_key +'"}' %}
-    {% assign enriched_items = enriched_items | push: enriched_item %}
+    {% assign item = item | merge: { "sort_key": sort_key } %}
+    {% assign enriched_items = enriched_items | push: item %}
   {% endfor %}
 
-  {%- comment -%} Sort items lexicographically by sort_key {%- endcomment -%}
-  {% assign sorted_items = enriched_items | sort %}
+  {%- comment -%} Sort by sort_key {%- endcomment -%}
+  {% assign sorted_items = enriched_items | sort: "sort_key" %}
 
   <ul>
-  {% for item_json in sorted_items %}
-    {% assign item = item_json | replace: '=>', ':' | jsonify | replace: '\\"', '"' | replace: '\\', '' | parse_json %}
+  {% for item in sorted_items %}
+    <li>
+      {% assign info_parts = "" | split: "" %}
+      {% if item.class %}
+        {% assign info_parts = info_parts | push: item.class | append: "-class" %}
+      {% endif %}
+      {% if item.released %}
+        {% assign info_parts = info_parts | push: "released in " | append: item.released %}
+      {% endif %}
 
-    {% assign info_parts = "" | split: "" %}
-    {% if item.class != "" %}
-      {% assign class_str = item.class | append: "-class" %}
-      {% assign info_parts = info_parts | push: class_str %}
-    {% endif %}
-    {% if item.released != "" %}
-      {% assign released_str = "released in " | append: item.released %}
-      {% assign info_parts = info_parts | push: released_str %}
-    {% endif %}
+      {% if info_parts.size > 0 %}
+        {% assign info_text = info_parts | join: ", " %}
+        {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "] (" | append: info_text | append: ")" %}
+      {% else %}
+        {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "]" %}
+      {% endif %}
 
-    {% if info_parts.size > 0 %}
-      {% assign info_text = info_parts | join: ", " %}
-      {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "] (" | append: info_text | append: ")" %}
-    {% else %}
-      {% assign display_text = item.title | append: " [" | append: item.sort_key | append: "]" %}
-    {% endif %}
-
-    {% if item.documented == "stub" %}
-      {{ display_text }} <em>— documentation pending</em>
-    {% else %}
-      <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-      {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
-    {% endif %}
+      {% if item.documented == "stub" %}
+        {{ display_text }} <em>— documentation pending</em>
+      {% else %}
+        <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
+        {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+      {% endif %}
+    </li>
   {% endfor %}
   </ul>
 {% endfor %}
