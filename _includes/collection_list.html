@@ -1,8 +1,8 @@
 {% comment %}
-  Include expects:
-    - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
-    - progress_values: comma-separated progress values to include (default: "done")
-    - sort_fields: comma-separated fields to sort by (default: "released")
+Include expects:
+  - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
+  - progress_values: comma-separated progress values to include (default: "done")
+  - sort_fields: comma-separated fields to sort by (default: "released")
 {% endcomment %}
 
 {% assign collections = include.collections | split: "," %}
@@ -21,21 +21,19 @@
     {% endif %}
   {% endfor %}
 
-  {%- comment -%} Enrich items with stable sort_key including tie-breaker 'order' {%- endcomment -%}
+  {%- comment -%}
+    Enrich items with a single stable sort_key:
+    - combine all configured sort fields
+    - append order (default 1) as tie-breaker
+  {%- endcomment -%}
+
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
     {% assign key_parts = "" | split: "" %}
 
     {% for field in sort_fields %}
-      {% assign field_value = "" %}
-      {% if field == "released" %}
-        {% assign field_value = item.released | default: "" %}
-      {% elsif field == "class" %}
-        {% assign field_value = item.class | default: "" %}
-      {% elsif field == "title" %}
-        {% assign field_value = item.title | default: "" %}
-      {% endif %}
+      {% assign field_value = item[field] | default: "" | append: "" %}
       {% assign key_parts = key_parts | push: field_value %}
     {% endfor %}
 
@@ -52,27 +50,30 @@
   <ul>
   {% for item in sorted_items %}
     <li>
-      {%- assign display_text = item.title -%}
-
+      {%- comment -%} Build display text with class and released info {%- endcomment -%}
       {%- assign info_parts = "" | split: "" -%}
+
       {%- if item.class -%}
-        {% assign info_parts = info_parts | push: item.class | append: "-class" %}
+        {% assign class_str = item.class | append: "-class" %}
+        {% assign info_parts = info_parts | push: class_str %}
       {% endif -%}
+
       {%- if item.released -%}
-        {% assign info_parts = info_parts | push: "released in " | append: item.released %}
+        {% assign released_str = "released in " | append: item.released %}
+        {% assign info_parts = info_parts | push: released_str %}
       {% endif -%}
 
       {%- if info_parts.size > 0 -%}
-        {% assign display_text = display_text | append: " (" | append: info_parts | join: ", " | append: ")" %}
-      {% endif -%}
+        {% assign display_text = item.title | append: " (" | append: info_parts | join: ", " | append: ")" %}
+      {%- else -%}
+        {% assign display_text = item.title %}
+      {%- endif -%}
 
       {% if item.documented == "stub" %}
         {{ display_text }} <em>— documentation pending</em>
       {% else %}
         <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-        {% if item.documented != "done" %}
-          <em>— documentation in progress</em>
-        {% endif %}
+        {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
       {% endif %}
     </li>
   {% endfor %}
