@@ -1,10 +1,3 @@
-{% comment %}
-Include expects:
-  - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
-  - progress_values: comma-separated progress values to include (default: "done")
-  - sort_fields: comma-separated fields to sort by (default: "released")
-{% endcomment %}
-
 {% assign collections = include.collections | split: "," %}
 {% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
@@ -13,7 +6,6 @@ Include expects:
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
 
-  {%- comment -%} Filter by allowed progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -21,24 +13,26 @@ Include expects:
     {% endif %}
   {% endfor %}
 
-  {%- comment -%}
-    Enrich items with a stable sort_key:
-    - combine all configured sort fields
-    - append order (default 1) as tie-breaker
-  {%- endcomment -%}
-
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
     {% assign key_parts = "" | split: "" %}
 
     {% for field in sort_fields %}
-      {% assign field_value = item[field] | default: "" %}
-      {% assign key_parts = key_parts | push: field_value %}
+      {% assign val = item[field] | default: "" %}
+      {% comment %}
+        If numeric, pad to 10 digits with leading zeros
+      {% endcomment %}
+      {% if val != "" and val matches '^\d+$' %}
+        {% assign val = "%010d" | format: val %}
+      {% endif %}
+      {% assign key_parts = key_parts | push: val %}
     {% endfor %}
 
-    {% assign order_value = item.order | default: 1 %}
-    {% assign key_parts = key_parts | push: order_value %}
+    {% comment %} Append order as tie-breaker, padded 10 digits {% endcomment %}
+    {% assign order_val = item.order | default: 1 %}
+    {% assign order_val = "%010d" | format: order_val %}
+    {% assign key_parts = key_parts | push: order_val %}
 
     {% assign sort_key = key_parts | join: "||" %}
     {% assign enriched_item = item | merge: { "sort_key": sort_key } %}
@@ -50,15 +44,12 @@ Include expects:
   <ul>
   {% for item in sorted_items %}
     <li>
-      {%- comment -%} Build display text cleanly {%- endcomment -%}
       {% assign info_parts = "" | split: "" %}
-
       {% if item.class %}
         {% assign info_parts = info_parts | push: item.class | append: "-class" %}
         {% assign class_str = item.class | append: "-class" %}
         {% assign info_parts = info_parts | push: class_str %}
       {% endif %}
-
       {% if item.released %}
         {% assign released_str = "released in " | append: item.released %}
         {% assign info_parts = info_parts | push: released_str %}
