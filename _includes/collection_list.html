@@ -6,7 +6,7 @@
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
 
-  {%- comment -%} Filter by allowed progress values {%- endcomment -%}
+  {% comment %} Filter by allowed progress values {% endcomment %}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -14,7 +14,7 @@
     {% endif %}
   {% endfor %}
 
-  {%- comment -%} Build enriched items with sort_key {%- endcomment -%}
+  {% comment %} Build enriched items with sort_key {% endcomment %}
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
@@ -22,7 +22,7 @@
 
     {% for field in sort_fields %}
       {% assign val = item[field] | default: "" %}
-      {% assign val = val | append: "                    " %} {# pad for lex sort #}
+      {% assign val = val | append: "                    " %} {# pad with spaces for lex sort #}
       {% assign key_parts = key_parts | push: val %}
     {% endfor %}
 
@@ -30,12 +30,10 @@
     {% assign key_parts = key_parts | push: order_val %}
 
     {% assign sort_key = key_parts | join: "||" %}
-
     {% assign item = item | merge: { "sort_key": sort_key } %}
     {% assign enriched_items = enriched_items | push: item %}
   {% endfor %}
 
-  {%- comment -%} Sort by sort_key {%- endcomment -%}
   {% assign sorted_items = enriched_items | sort: "sort_key" %}
 
   <ul>
