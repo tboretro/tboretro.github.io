@@ -1,10 +1,12 @@
 {% assign collections = include.collections | split: "," %}
+{% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
+{% assign progress_values = include.progress_values | default: "done" | split: "," %}
 
 {% for collection_name in collections %}
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
 
-  {% assign progress_values = include.progress_values | default: "done" | split: "," %}
+  {%- comment -%} Filter by allowed progress values {%- endcomment -%}
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -12,33 +14,24 @@
     {% endif %}
   {% endfor %}
 
+  {%- comment -%} Build enriched array with simple stable sort_key {%- endcomment -%}
   {% assign enriched_items = "" | split: "" %}
 
   {% for item in filtered_items %}
-    {% assign released_val = item.released | default: "0000" %}
-    {% assign class_val = item.class | default: "abcd" %}
-    {% assign order_val = item.order | default: "5" %}
-
-    {% assign sort_key = released_val | append: class_val | append: order_val %}
-
-    {% assign enriched_items = enriched_items | push: sort_key | push: item %}
+    {% assign enriched_item = item | merge: { "sort_key": "abc" } %}
+    {% assign enriched_items = enriched_items | push: enriched_item %}
   {% endfor %}
 
-  {%- comment -%} Sort by first element (sort_key) of each pair -{%- endcomment -%}
-  {% assign sorted_items = enriched_items | sort %}
+  {% assign sorted_items = enriched_items | sort: "sort_key" %}
 
   <ul>
-  {% for pair in sorted_items %}
-    {% assign item = pair[1] %}
-
+  {% for item in sorted_items %}
     <li>
       {% assign info_parts = "" | split: "" %}
-
       {% if item.class %}
         {% assign class_str = item.class | append: "-class" %}
         {% assign info_parts = info_parts | push: class_str %}
       {% endif %}
-
       {% if item.released %}
         {% assign released_str = "released in " | append: item.released %}
         {% assign info_parts = info_parts | push: released_str %}
@@ -46,9 +39,9 @@
 
       {% if info_parts.size > 0 %}
         {% assign info_text = info_parts | join: ", " %}
-        {% assign display_text = item.title | append: " (" | append: info_text | append: ")" %}
+        {% assign display_text = item.title | append: " - " | append: item.sort_key | append: " (" | append: info_text | append: ")" %}
       {% else %}
-        {% assign display_text = item.title %}
+        {% assign display_text = item.title | append: " - " | append: item.sort_key %}
       {% endif %}
 
       {% if item.documented == "stub" %}
