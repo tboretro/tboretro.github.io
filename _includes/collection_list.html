@@ -28,18 +28,24 @@ Include expects:
     {% assign released_val = item.released | default: "0000" %}
     {% assign class_val = item.class | default: "abcd" %}
     {% assign order_val = item.order | default: "5" %}
-
+  
+    {% comment %} alle Werte sind Strings, niemals nil {% endcomment %}
+    {% assign released_val = released_val | append: "" %}
+    {% assign class_val = class_val | append: "" %}
+    {% assign order_val = order_val | append: "" %}
+  
     {% assign sort_key = released_val | append: class_val | append: order_val %}
-
+  
     {% assign enriched_item = "" | split: "" %}
     {% assign enriched_item = enriched_item | push: sort_key %}
     {% assign enriched_item = enriched_item | push: item %}
     {% assign enriched_items = enriched_items | push: enriched_item %}
   {% endfor %}
 
+  {% assign sort_keys = enriched_items | map: "0" | sort %}
+
   {%- comment -%} Sort by sort_key {%- endcomment -%}
   {% assign sorted_items = "" | split: "" %}
-  {% assign sort_keys = enriched_items | map: "0" | sort %}
 
   {% for key in sort_keys %}
     {% for pair in enriched_items %}
