@@ -4,7 +4,7 @@ xclass: Pentium-4
 xreleased: abc
 progress: done
 documented: stub
-xsortkey: abc
+sortkey: abc
 ---
 
 # {{ page.title }}
