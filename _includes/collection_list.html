@@ -1,18 +1,18 @@
 {% comment %}
-Include expects:
-  - collections: comma-separated collection names (e.g., "home_computers,ibm_portables")
-  - progress_values: comma-separated progress values to include (default: "done")
-It will be sorted by released, class [default: "abcd"] and order (default: "5")
+  Include expects:
+    - collections: comma-separated collection names (e.g., "home_computers, ibm_portables")
+    - progress_values: comma-separated progress values to include (default: "done")
+    - sort_fields: comma-separated fields to sort by (default: "released")
 {% endcomment %}
 
 {% assign collections = include.collections | split: "," %}
+{% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
 
 {% for collection_name in collections %}
   {% assign collection_items = site[collection_name] %}
   {% assign filtered_items = "" | split: "" %}
-
-  {%- comment -%} Filter items by allowed progress values {%- endcomment -%}
+  
   {% for value in progress_values %}
     {% assign matching_items = collection_items | where: "progress", value %}
     {% if matching_items %}
@@ -20,59 +20,48 @@ It will be sorted by released, class [default: "abcd"] and order (default: "5")
     {% endif %}
   {% endfor %}
 
-  {%- comment -%} Build enriched array with combined sort_key {%- endcomment -%}
+  {%- comment -%}
+    Now enforce "order" sorting at first..
+    We create a helper array of items with normalized "order_value".
+  {%- endcomment -%}
+
   {% assign enriched_items = "" | split: "" %}
 
-  {% for item in filtered_items %}
-    {% assign released_val = item.released | default: "0000" %}
-    {% assign class_val = item.class | default: "abcd" %}
-    {% assign order_val = item.order | default: "5" %}
-
-    {%- comment -%} Alles als Strings, keine nils, 4-stellig für released/class, 1-stellig für order {%- endcomment -%}
-    {% assign released_val = released_val | append: "" %}
-    {% assign class_val = class_val | append: "" %}
-    {% assign order_val = order_val | append: "" %}
-
-    {% assign sort_key = released_val | append: class_val | append: order_val %}
-
-    {% assign enriched_item = "" | split: "" %}
-    {% assign enriched_item = enriched_item | push: sort_key %}
-    {% assign enriched_item = enriched_item | push: item %}
-    {% assign enriched_items = enriched_items | push: enriched_item %}
+  {% for item in filtered %}
+    {% assign order_value = item.order | default: 1 %}
+    {% assign item = item | merge: {"order_value": order_value } %}
+    {% assign enriched_items = enriched_items | push: item %}
   {% endfor %}
 
-  {%- comment -%} Sort by sort_key safely {%- endcomment -%}
-  {% assign sort_keys = enriched_items | map: "0" | sort %}
+  {%- comment -%} Final sorting step: sort by normalized order_value {%- endcomment -%}
+  {% assign ordered_items = enriched_items | sort: "order_value" %}
 
-  {% assign sorted_items = "" | split: "" %}
-  {% for key in sort_keys %}
-    {% for pair in enriched_items %}
-      {% if pair[0] == key %}
-        {% assign sorted_items = sorted_items | push: pair[1] %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
+  {% assign sorted_items = ordered_items %}
+  {% for field in sort_fields %}
+    {% assign sorted_items = sorted_items | sort: field %}
   {% endfor %}
 
   <ul>
   {% for item in sorted_items %}
     <li>
-      {% assign info_parts = "" | split: "" %}
-      {% if item.class %}
+      {% assign display_text = item.title %}
+      {% comment %} create empty array: {% endcomment %}
+      {%- assign info_parts = "" | split: "" -%}
+
+      {%- if item.class -%}
         {% assign class_str = item.class | append: "-class" %}
         {% assign info_parts = info_parts | push: class_str %}
-      {% endif %}
-      {% if item.released %}
+      {%- endif -%}
+
+      {%- if item.released -%}
         {% assign released_str = "released in " | append: item.released %}
         {% assign info_parts = info_parts | push: released_str %}
-      {% endif %}
+      {%- endif -%}
 
-      {% if info_parts.size > 0 %}
+      {%- if info_parts.size > 0 -%}
         {% assign info_text = info_parts | join: ", " %}
-        {% assign display_text = item.title | append: " (" | append: info_text | append: ")" %}
-      {% else %}
-        {% assign display_text = item.title %}
-      {% endif %}
+        {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
+      {%- endif -%}
 
       {% if item.documented == "stub" %}
         {{ display_text }} <em>— documentation pending</em>
