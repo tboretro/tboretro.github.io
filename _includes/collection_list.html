@@ -19,7 +19,7 @@
     {% endif %}
   {% endfor %}
 
-  {% assign sorted_items = sorted_items | sort: sortkey %}
+  {% assign sorted_items = filtered_items | sort: "sortkey" %}
 
   <ul>
   {% for item in sorted_items %}
