@@ -3,6 +3,7 @@ title: Atari 800XL
 released: 1983
 progress: pile
 documented: stub
+sortkey: 1983
 ---
 
 # {{ page.title }}

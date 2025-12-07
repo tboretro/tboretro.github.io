@@ -3,6 +3,7 @@ title: Nintendo Game Boy Micro
 released: 2005
 progress: done
 documented: done
+sortkey: 2005
 ---
 
 # {{ page.title }}

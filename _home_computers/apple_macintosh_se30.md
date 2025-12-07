@@ -3,6 +3,7 @@ title: Macintosh SE/30
 released: 1989
 progress: pile
 documented: stub
+sortkey: 1989
 ---
 
 # {{ page.title }}

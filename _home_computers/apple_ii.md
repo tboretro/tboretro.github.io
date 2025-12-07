@@ -3,6 +3,7 @@ title: Apple IIc
 released: 1984
 progress: done
 documented: done
+sortkey: 1984
 ---
 
 # {{ page.title }}

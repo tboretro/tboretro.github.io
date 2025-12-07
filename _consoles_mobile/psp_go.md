@@ -3,6 +3,7 @@ title: Sony Playstation Portable Go
 released: 2009
 progress: done
 documented: done
+sortkey: 2009
 ---
 
 # {{ page.title }}

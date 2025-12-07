@@ -3,6 +3,7 @@ title: New Nintendo 3DS XL
 released: 2014
 progress: done
 documented: done
+sortkey: 2014
 ---
 
 # {{ page.title }}

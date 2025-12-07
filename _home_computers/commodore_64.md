@@ -3,6 +3,7 @@ title: Commodore 64
 released: 1982
 progress: done
 documented: done
+sortkey: 1982
 ---
 
 # {{ page.title }}

@@ -3,6 +3,7 @@ title: Amiga 500
 released: 1987
 progress: done
 documented: done
+sortkey: 1987
 ---
 
 # {{ page.title }}

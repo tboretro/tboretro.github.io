@@ -3,7 +3,7 @@ title: Nintendo WiiU (Spare)
 released: 2012
 progress: done
 documented: done
-order: 2
+sortkey: 2012_1
 ---
 
 # {{ page.title }}

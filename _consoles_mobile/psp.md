@@ -3,6 +3,7 @@ title: Sony Playstation Portable
 released: 2008
 progress: done
 documented: done
+sortkey: 2008
 ---
 
 # {{ page.title }}

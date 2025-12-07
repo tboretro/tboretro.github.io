@@ -3,6 +3,7 @@ title: Nintendo Game & Watch - The Legend of Zelda
 released: 2020
 progress: done
 documented: done
+sortkey: 2020
 ---
 
 # {{ page.title }}

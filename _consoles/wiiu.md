@@ -3,6 +3,7 @@ title: Nintendo WiiU
 released: 2012
 progress: done
 documented: done
+sortkey: 2012_2
 ---
 
 # {{ page.title }}

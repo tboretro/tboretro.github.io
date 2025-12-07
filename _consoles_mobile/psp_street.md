@@ -3,6 +3,7 @@ title: Sony Playstation Portable Street
 released: 2011
 progress: done
 documented: done
+sortkey: 2011
 ---
 
 # {{ page.title }}

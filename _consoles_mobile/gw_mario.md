@@ -3,6 +3,7 @@ title: Nintendo Game & Watch - Super Mario Bros.
 released: 2020
 progress: done
 documented: done
+sortkey: 2020
 ---
 
 # {{ page.title }}
