@@ -1,5 +1,5 @@
 ---
-title: Macintosh SE/30
+title: Macintosh SE
 released: 1989
 progress: pile
 documented: stub
@@ -16,6 +16,8 @@ Board Revision: TODO
 
 Board Serial Number: TODO
 
+Case: Macintosh SE/30
+
 ## Original Peripherals
 
 * TODO
@@ -26,4 +28,4 @@ Board Serial Number: TODO
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/Macintosh_SE/30)
+[Wikipedia](https://en.wikipedia.org/wiki/Macintosh_SE)
