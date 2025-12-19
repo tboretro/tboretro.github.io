@@ -1,5 +1,5 @@
 ---
-title: Macintosh SE
+title: Apple Macintosh SE
 released: 1989
 progress: pile
 documented: stub
