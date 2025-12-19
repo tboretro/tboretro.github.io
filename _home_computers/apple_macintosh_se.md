@@ -1,6 +1,6 @@
 ---
 title: Apple Macintosh SE
-released: 1989
+released: 1987
 progress: pile
 documented: stub
 sortkey: 1989
