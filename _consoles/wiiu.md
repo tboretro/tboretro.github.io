@@ -27,7 +27,8 @@ MLC Manifacturer: Samsung
 * WiiU Pro Controller (black)
 * 2x Wii Remote Plus (black) with Nunchuk
 * 2X Wii Steering Wheel (black)
-* Wii Bance Board (black)
+* Wii Balance Board (black)
+* WiiU Fit Meter (black)
 * Sensor bar (black)
 
 ## Modern Additions/Mods
