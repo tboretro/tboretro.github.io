@@ -35,7 +35,7 @@ Board Serial Number: 438
 * Sony Playstation
 * Vectrex
 
-... and many more - thist are just the ones I use.
+... and many more - these are just the ones I use.
 
 ## Modern Peripherals
 
