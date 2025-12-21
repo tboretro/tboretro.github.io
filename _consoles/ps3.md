@@ -3,7 +3,7 @@ title: Sony Playstation 3
 xreleased: abc
 progress: done
 documented: stub
-sortkey: 9999
+sortkey: 9999_0
 ---
 
 # {{ page.title }}
