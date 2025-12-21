@@ -1,5 +1,5 @@
 ---
-title: IBM ThinkCentre A51
+title: ZX Spectrum Next
 xclass: Pentium-4
 xreleased: abc
 progress: done

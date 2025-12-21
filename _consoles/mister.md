@@ -1,29 +1,48 @@
 ---
-title: Mister Multisystem
-xreleased: abc
+title: Heber Mister Multisystem
+released: 2021
 progress: done
-documented: stub
-xsortkey: 9998
+documented: done
+sortkey: 2021
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: TODO
+Model: Heber Mister Multisystem
 
-Board Revision: TODO
+DE10 Nano Board Serial Number: 21030005-0847
 
-Board Serial Number: TODO
+DE10 Nano Board Revision: C
 
-## Original Peripherals
+Board Serial Number: 438
 
-* TODO
+## Plays
 
-## Modern Additions/Mods
+* NEC PC Engine
+* NEC PC Engine CD
+* Nintendo Entertainment System
+* Nintendo Super Entertainsment System
+* Nintendo N64
+* Philips CD-i
+* Sega Master System
+* Sega Mega Drive
+* Sega Mega CD
+* Sega 32x
+* Sega Saturn
+* SNK Neo Geo
+* Sony Playstation
+* Vectrex
 
-* TODO
+... and many more - thist are just the ones I use.
+
+## Modern Peripherals
+
+* 256GB SSD on USB
+* 2x 8BitDo N30 Pro with 8BitDo Wireless Adapter 2
+* Rii WIreless Keyboard
 
 ## Links
 
-TODO [Wikipedia]()
+[Manifacturer](https://multisystem.uk/products/mister-multisystem/)
