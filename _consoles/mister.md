@@ -36,7 +36,7 @@ Board Serial Number: 438
 * [Sega Saturn](https://en.wikipedia.org/wiki/Sega_Saturn)
 * [SNK Neo Geo](https://en.wikipedia.org/wiki/Neo_Geo)
 * [Sony Playstation](https://en.wikipedia.org/wiki/PlayStation_(console))
-* [Vectrex(https://en.wikipedia.org/wiki/Vectrex)]
+* [Vectrex](https://en.wikipedia.org/wiki/Vectrex)]
 
 ... and many more - these are just the ones I use.
 
