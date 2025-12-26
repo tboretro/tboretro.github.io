@@ -2,7 +2,7 @@
 title: Sony Playstation 3
 released: 2009
 progress: done
-documented: started
+documented: done
 sortkey: 2009_0
 ---
 
@@ -12,9 +12,7 @@ sortkey: 2009_0
 
 Model: Sony Playstation 3 Slim 
 
-Board Revision: TODO
-
-Board Serial Number: TODO
+Serial Number: 02-27456973-1484027-CECH-25048
 
 ## Also plays
 
