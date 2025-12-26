@@ -16,7 +16,7 @@ Serial Number: QEF103962731
 
 ## Also plays
 
-* Nintendo Virtual Boy
+* [Nintendo Virtual Boy](https://en.wikipedia.org/wiki/Virtual_Boy)
 
 ## Modern Additions/Mods
 

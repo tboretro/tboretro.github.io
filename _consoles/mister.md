@@ -20,20 +20,23 @@ Board Serial Number: 438
 
 ## Plays
 
-* NEC PC Engine
+<!-- * [3DO](https://en.wikipedia.org/wiki/3DO)-->
+<!-- * Atari X+ Y-->
+<!-- * Atari Jaguar-->
+* [NEC PC Engine](https://en.wikipedia.org/wiki/TurboGrafx-16)
 * NEC PC Engine CD
-* Nintendo Entertainment System
-* Nintendo Super Entertainsment System
-* Nintendo N64
-* Philips CD-i
-* Sega Master System
-* Sega Mega Drive
-* Sega Mega CD
-* Sega 32x
-* Sega Saturn
-* SNK Neo Geo
-* Sony Playstation
-* Vectrex
+* [Nintendo Entertainment System](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System)
+* [Nintendo Super Entertainsment System](https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System)
+* [Nintendo 64](https://en.wikipedia.org/wiki/Nintendo_64)
+* [Philips CD-i](https://en.wikipedia.org/wiki/CD-i)
+* [Sega Master System](https://en.wikipedia.org/wiki/Master_System)
+* [Sega Mega Drive](https://en.wikipedia.org/wiki/Sega_Genesis)
+* [Sega Mega CD](https://en.wikipedia.org/wiki/Sega_CD)
+* [Sega 32x](https://en.wikipedia.org/wiki/32X)
+* [Sega Saturn](https://en.wikipedia.org/wiki/Sega_Saturn)
+* [SNK Neo Geo](https://en.wikipedia.org/wiki/Neo_Geo)
+* [Sony Playstation](https://en.wikipedia.org/wiki/PlayStation_(console))
+* [Vectrex(https://en.wikipedia.org/wiki/Vectrex)]
 
 ... and many more - these are just the ones I use.
 

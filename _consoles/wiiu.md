@@ -18,8 +18,8 @@ MLC Manifacturer: Samsung
 
 ## Also plays
 
-* Nintendo Game Cube
-* Nintendo Wii
+* [Nintendo Game Cube](https://en.wikipedia.org/wiki/GameCube)
+* [Nintendo Wii](https://en.wikipedia.org/wiki/Wii)
 
 ## Original Peripherals
 

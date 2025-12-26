@@ -16,9 +16,9 @@ Serial Number: MEH10034396
 
 ## Also plays
 
-* Game Boy
-* Game Boy Color
-* Game Boy Advance
+* [Nintendo Game Boy](https://en.wikipedia.org/wiki/Game_Boy)
+* [Nintendo Game Boy Color](https://en.wikipedia.org/wiki/Game_Boy_Color)
+* [Nintendo Game Boy Advance](https://en.wikipedia.org/wiki/Game_Boy_Advance)
 
 ## Modern Additions/Mods
 
