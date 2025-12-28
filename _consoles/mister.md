@@ -24,7 +24,7 @@ Board Serial Number: 438
 <!-- * Atari X+ Y-->
 <!-- * Atari Jaguar-->
 * [NEC PC Engine](https://en.wikipedia.org/wiki/TurboGrafx-16)
-* NEC PC Engine CD
+* [NEC PC Engine CD](https://en.wikipedia.org/wiki/TurboGrafx-16#TurboGrafx-CD/CD-ROM%C2%B2)
 * [Nintendo Entertainment System](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System)
 * [Nintendo Super Entertainsment System](https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System)
 * [Nintendo 64](https://en.wikipedia.org/wiki/Nintendo_64)
