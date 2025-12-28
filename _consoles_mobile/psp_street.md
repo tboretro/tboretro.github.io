@@ -18,7 +18,7 @@ Serial Number: AC7231130
 
 * added USB charging cable
 * added microSD adapter
-* installed ARK-4 r180 custom firmware
+* installed ARK-4 r203 custom firmware
 
 ## Links
 

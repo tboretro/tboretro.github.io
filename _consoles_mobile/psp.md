@@ -18,7 +18,7 @@ Serial Number: AC0050518
 
 * added USB charging cable
 * added microSD adapter
-* installed ARK-4 r180 custom firmware
+* installed ARK-4 r203 custom firmware
 
 ## Links
 
