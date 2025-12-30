@@ -1,30 +1,29 @@
 ---
-title: ZX Spectrum Next
-xclass: Pentium-4
-xreleased: abc
+title: ZX Spectrum Next Issue 4 (KS2)
+released: 2023
 progress: done
-documented: stub
-sortkey: 9999
+documented: started
+sortkey: 2023
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: TODO
+Model: ZX Spectrum Next Issue 4 (KS2)
 
-Board Revision: TODO
+## Acts as
 
-Board Serial Number: TODO
+<!-- * [Sinclair ZS 81](https://en.wikipedia.org/wiki/ZX81) -->
+* [Sinclair ZX Spectrum](https://en.wikipedia.org/wiki/ZX_Spectrum) 
+* [Sinclair QL](https://en.wikipedia.org/wiki/Sinclair_QL)
+<!-- * Sam Coupe -->
+<!-- * Other cores - todo: BBC Micro, Amstrad CPC, weitere? -->
 
 ## Original Peripherals
 
-* TODO
-
-## Modern Additions/Mods
-
-* TODO
+* Raspberry Pi Zero "Accelerator" 
 
 ## Links
 
-TODO [Wikipedia]()
+[Wikipedia](https://en.wikipedia.org/wiki/ZX_Spectrum_Next)
