@@ -12,13 +12,15 @@ sortkey: 2023
 
 Model: ZX Spectrum Next Issue 4 (KS2)
 
-## Acts as
+## Also acts as
 
 <!-- * [Sinclair ZS 81](https://en.wikipedia.org/wiki/ZX81) -->
 * [Sinclair ZX Spectrum](https://en.wikipedia.org/wiki/ZX_Spectrum) 
 * [Sinclair QL](https://en.wikipedia.org/wiki/Sinclair_QL)
+* [Acorn BBC Micro](https://en.wikipedia.org/wiki/BBC_Micro) Model B (with third party core)
+* [Acorn BBC Master](https://en.wikipedia.org/wiki/BBC_Master) (with third party core)
 <!-- * Sam Coupe -->
-<!-- * Other cores - todo: BBC Micro, Amstrad CPC, weitere? -->
+<!-- * Other cores - todo: Amstrad CPC, weitere? -->
 
 ## Original Peripherals
 
