@@ -1,5 +1,5 @@
 ---
-title: ZX Spectrum Next Issue 4 (KS2)
+title: ZX Spectrum Next
 released: 2023
 progress: done
 documented: done
