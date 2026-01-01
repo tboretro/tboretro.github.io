@@ -2,7 +2,7 @@
 title: ZX Spectrum Next Issue 4 (KS2)
 released: 2023
 progress: done
-documented: started
+documented: done
 sortkey: 2023
 ---
 
