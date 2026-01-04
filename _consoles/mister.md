@@ -20,7 +20,7 @@ Board Serial Number: 438
 
 ## Plays
 
-<!-- * [3DO](https://en.wikipedia.org/wiki/3DO)-->
+<!-- * [Panasonic 3DO](https://en.wikipedia.org/wiki/3DO)-->
 <!-- * Atari X+ Y-->
 <!-- * Atari Jaguar-->
 * [NEC PC Engine](https://en.wikipedia.org/wiki/TurboGrafx-16)
@@ -44,7 +44,7 @@ Board Serial Number: 438
 
 * 256GB SSD on USB
 * 2x 8BitDo N30 Pro with 8BitDo Wireless Adapter 2
-* Rii WIreless Keyboard
+* Rii Wireless Keyboard
 
 ## Links
 

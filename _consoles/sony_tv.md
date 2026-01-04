@@ -1,30 +1,34 @@
 ---
-title: Sony TV
-xclass: Pentium-4
-xreleased: abc
-progress: done
+title: Sony Playstation TV
+xreleased: 2014
+progress: started
 documented: stub
-sortkey: 9999_0
+sortkey: 2014_0
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: TODO
+Model: Sony Playstation TV
 
-Board Revision: TODO
+Model Revision: VTE-1016
 
-Board Serial Number: TODO
+Serial Number: 4250036
+
+## Also Plays
+
+* [Sony Playstation Portable](https://en.wikipedia.org/wiki/PlayStation_Portable)
 
 ## Original Peripherals
 
-* TODO
+* 1x Dualshock 4
 
 ## Modern Additions/Mods
 
-* TODO
+* SD2Vita mit 120GB microSD card
+* installed XXX custom firmware
 
 ## Links
 
-TODO [Wikipedia]()
+[Wikipedia](https://en.wikipedia.org/wiki/PlayStation_TV)
