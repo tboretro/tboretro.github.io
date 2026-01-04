@@ -1,6 +1,6 @@
 ---
 title: Sony Playstation TV
-xreleased: 2014
+released: 2014
 progress: started
 documented: stub
 sortkey: 2014_0
