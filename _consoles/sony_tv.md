@@ -1,8 +1,8 @@
 ---
 title: Sony Playstation TV
 released: 2014
-progress: started
-documented: stub
+progress: done
+documented: done
 sortkey: 2014_0
 ---
 
@@ -27,7 +27,8 @@ Serial Number: 4250036
 ## Modern Additions/Mods
 
 * SD2Vita mit 120GB microSD card
-* installed XXX custom firmware
+* installed HenKaku Enso custom firmware
+* installed Adrenaline to boot into PSP firmware
 
 ## Links
 
