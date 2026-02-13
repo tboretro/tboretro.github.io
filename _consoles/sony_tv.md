@@ -22,7 +22,7 @@ Serial Number: 4250036
 
 ## Original Peripherals
 
-* 1x Dualshock 4
+* 1x Dualshock 3
 
 ## Modern Additions/Mods
 

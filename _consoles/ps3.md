@@ -20,7 +20,7 @@ Serial Number: 02-27456973-1484027-CECH-25048
 
 ## Original Peripherals
 
-* 3x Dualshock 3
+* 2x Dualshock 3
 * Playstation Move
 * Playstation Eye
 * Blu-ray Disc Remote Control
