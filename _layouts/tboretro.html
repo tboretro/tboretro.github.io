@@ -2,6 +2,13 @@
 layout: default
 ---
 
+<nav class="topnav">
+  <ul>
+    <li><a href="{{ "/" | relative_url }}">My Collection</a></li>
+    <li><a href="{{ "/links/" | relative_url }}">Links</a></li>
+  </ul>
+</nav>
+
 <!-- set class to reference in css -->
 <div class="{% if page.collection %}collection-{{ page.collection }}{% else %}page-index{% endif %}">
   {{ content }}
