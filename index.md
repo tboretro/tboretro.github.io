@@ -39,14 +39,3 @@ This is just a space to keep track of my collection of retro computer stuff
    collections="home_computers,ibm_compatibles,ibm_portables,game_consoles" 
    progress_values="pile" %}
 
-## Interals / To-Dos
-
-* Add all devices
-
-* Maybe add hifi setup
-
-* Status of 
-  * progress: pile, started, done
-  * documented: stub, started, done
-
-* Add photo gallery (see ChatGPT chat for ideas how to)
