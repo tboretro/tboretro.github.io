@@ -1,5 +1,5 @@
 theme: minima
-title: "TBO Retro Page"
+title: "TBO Retro"
 description: "My Retro Collection"
 url: "https://tboretro.github.io"
 
@@ -17,6 +17,11 @@ collections:
 
 
 defaults:
+  - scope:
+      path: ""      # site-wide
+      type: "pages"
+    values:
+      layout: "home"
   - scope:
       path: ""      # site-wide
       type: "home_computers"
