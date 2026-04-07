@@ -32,6 +32,7 @@ This is just a space to keep track of my collection of retro computer stuff
    collections="consoles_mobile" 
    progress_values="started,done" %}
 
+* [Common Computer Peripherals](static/common_peripherals)
 
 ## Pile of To Do
 
