@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {{ site.styles }}
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+
+      <!-- ▶︎ HIER: Navigation einfügen -->
+      <nav class="topnav">
+        <ul>
+          <li><a href="{{ "/" | relative_url }}">My Collection</a></li>
+          <li><a href="{{ "/links/" | relative_url }}">Links</a></li>
+        </ul>
+      </nav>
+      <!-- ▲ Ende Navigation -->
+    </header>
+
+    <section>
+      {{ content }}
+    </section>
+  </body>
+</html>
