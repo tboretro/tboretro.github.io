@@ -5,8 +5,9 @@ url: "https://tboretro.github.io"
 header_pages:
   - index.md
   - consoles.md
+  - pile.md
   - links.md
-  - todo.md
+  - intern.md
 
 collections:
   home_computers:
