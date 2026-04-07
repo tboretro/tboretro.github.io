@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Common Peripherals
 
 <!-- ## Original Joxsticks -->

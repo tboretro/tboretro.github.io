@@ -1,4 +1,4 @@
-# My Collection
+# Consoles
 
 This is just a space to keep track of my collection of retro consoles
 
