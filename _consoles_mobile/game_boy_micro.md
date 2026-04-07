@@ -22,8 +22,8 @@ Serial Number: MEH10034396
 
 ## Modern Additions/Mods
 
-* added USB charging cable
-* added EZ-FLASH Omega
+* Added USB charging cable
+* Added EZ-FLASH Omega
 
 ## Links
 

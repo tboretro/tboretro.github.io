@@ -21,8 +21,8 @@ Serial Number: UJF10684274
 
 ## Modern Additions/Mods
 
-* added USB charging cable
-* added M3 DS Real with rumble pack
+* Added USB charging cable
+* Added M3 DS Real with rumble pack
 
 ## Links
 

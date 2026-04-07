@@ -20,8 +20,8 @@ Serial Number: QEF103962731
 
 ## Modern Additions/Mods
 
-* added USB charging cable
-* installed Luma3DS 13.0.2 custom firmware
+* Added USB charging cable
+* Installed Luma3DS 13.0.2 custom firmware
 
 ## Links
 

@@ -27,7 +27,7 @@ MLC Manifacturer: Hynix
 
 ## Modern Additions/Mods
 
-* installed Aroma Beta 24 custom firmware
+* Installed Aroma Beta 24 custom firmware
 
 ## Links
 

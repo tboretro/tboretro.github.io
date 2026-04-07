@@ -1,8 +1,8 @@
 ---
 title: Atari 800XL
 released: 1983
-progress: pile
-documented: stub
+progress: started
+documented: started
 sortkey: 1983
 ---
 
@@ -10,19 +10,25 @@ sortkey: 1983
 
 ## Information
 
-Model: TODO
+Model: Atari 800XL
 
-Board Revision: TODO
+Case Serial Number: 72RHA 840010165 264
 
 Board Serial Number: TODO
 
+Board Revision: TODO
+
 ## Original Peripherals
 
-* TODO
+* Atari XC12 Program Recorder
 
 ## Modern Additions/Mods
 
-* TODO
+* Added [SDriveMax](https://github.com/kbr-net/sdrive-max)
+* Fittet [GTIAdigitizer](https://github.com/c0pperdragon/LumaCode/wiki/GTIAdigitizer-(for-Atari-8bit)) to putput LumaCode
+* Fittet [The Brewing Academy Ultimate Atari Video](https://thebrewingacademy.com/collections/ultimate-atari-video-uav/products/tba-ultimate-atari-video-uav-board-for-400-800-xl-xe) - done by previuos owner
+* Switched power supply to small USB C power board which is accessble behind unused case opening (originally for channel switch)
+  * Closed now unused power connector
 
 ## Links
 

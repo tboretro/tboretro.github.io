@@ -16,9 +16,9 @@ Serial Number: HC0075050
 
 ## Modern Additions/Mods
 
-* added USB charging cable
-* added PSP Go microSD adapter (internal)
-* installed ARK-4 r203 custom firmware
+* Added USB charging cable
+* Added PSP Go microSD adapter (internal)
+* Installed ARK-4 r203 custom firmware
 
 ## Links
 

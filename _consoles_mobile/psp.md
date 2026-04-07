@@ -16,9 +16,9 @@ Serial Number: AC0050518
 
 ## Modern Additions/Mods
 
-* added USB charging cable
-* added microSD adapter
-* installed ARK-4 r203 custom firmware
+* Added USB charging cable
+* Added microSD adapter
+* Installed ARK-4 r203 custom firmware
 
 ## Links
 

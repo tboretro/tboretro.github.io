@@ -26,9 +26,9 @@ Serial Number: 4250036
 
 ## Modern Additions/Mods
 
-* SD2Vita mit 120GB microSD card
-* installed HenKaku Enso custom firmware
-* installed Adrenaline to boot into PSP firmware
+* Added SD2Vita mit 120GB microSD card
+* Installed HenKaku Enso custom firmware
+* Installed Adrenaline to boot into PSP firmware
 
 ## Links
 

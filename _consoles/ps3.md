@@ -27,9 +27,9 @@ Serial Number: 02-27456973-1484027-CECH-25048
 
 ## Modern Additions/Mods
 
-* upgraded to internal 1TB  SSD
-* added 1TB SSD on USB
-* installed Evilnat 4.92.2 custom firmware with webMAN MOD 1.47.48n
+* Upgraded to internal 1TB  SSD
+* Added 1TB SSD on USB
+* Installed Evilnat 4.92.2 custom firmware with webMAN MOD 1.47.48n
 
 ## Links
 

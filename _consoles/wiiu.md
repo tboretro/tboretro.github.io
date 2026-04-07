@@ -33,8 +33,8 @@ MLC Manifacturer: Samsung
 
 ## Modern Additions/Mods
 
-* added 1TB SSD on USB
-* installed Aroma Beta 24 custom firmware
+* Added 1TB SSD on USB
+* Installed Aroma Beta 24 custom firmware
 
 ## Links
 
