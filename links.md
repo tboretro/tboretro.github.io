@@ -28,7 +28,7 @@ These are just some links to some thematically related sites.
 
 [ScaryBeast Security](https://scarybeastsecurity.blogspot.com/)
 
-## Software related bogs
+## Software related blogs
 
 [Computers are bad](https://computer.rip/archive.html)
 
