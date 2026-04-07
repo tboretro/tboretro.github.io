@@ -3,6 +3,12 @@ title: "TBO Retro"
 description: "My Retro Collection"
 url: "https://tboretro.github.io"
 
+header_pages:
+  - index.md
+  - consoles.md
+  - links.md
+  - todo.md
+
 collections:
   home_computers:
     output: true
@@ -23,5 +29,30 @@ defaults:
   - scope:
       path: ""      # site-wide
       type: "pages"
+    values:
+      layout: "home"
+  - scope:
+      path: ""      # site-wide
+      type: "home_computers"
+    values:
+      layout: "home"
+  - scope:
+      path: ""      # site-wide
+      type: "ibm_compatibles"
+    values:
+      layout: "home"
+  - scope:
+      path: ""      # site-wide
+      type: "ibm_portables"
+    values:
+      layout: "home"
+  - scope:
+      path: ""      # site-wide
+      type: "consoles"
+    values:
+      layout: "home"
+  - scope:
+      path: ""      # site-wide
+      type: "consoles_mobile"
     values:
       layout: "home"
