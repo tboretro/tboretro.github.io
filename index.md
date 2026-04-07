@@ -1,4 +1,4 @@
-# My Collection
+# Computers
 
 This is just a space to keep track of my collection of retro computer stuff
 
@@ -20,17 +20,7 @@ This is just a space to keep track of my collection of retro computer stuff
    collections="ibm_portables" 
    progress_values="started,done" %}
 
-## Game Consoles
-
-{% include collection_list.html 
-   collections="consoles" 
-   progress_values="started,done" %}
-
-## Mobile Game Consoles
-
-{% include collection_list.html 
-   collections="consoles_mobile" 
-   progress_values="started,done" %}
+## Common
 
 * [Common Computer Peripherals](static/common_peripherals)
 
