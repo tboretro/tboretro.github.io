@@ -10,6 +10,8 @@
 {% assign collections = include.collections | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
 
+{%- assign all_items = "" | split: "" -%}
+
 {% for collection_name in collections %}
   {% assign collection_items = site[collection_name] %}
   {% if collection_items %}
