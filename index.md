@@ -23,3 +23,8 @@ This is just a space to keep track of my collection of retro computer stuff
 ## Common
 
 * [Common Computer Peripherals](static/common_peripherals)
+
+## Pile of To-Dos
+{% include collection_list.html 
+   collections="home_computers,ibm_compatibles,ibm_portables" 
+   progress_values="pile" %}

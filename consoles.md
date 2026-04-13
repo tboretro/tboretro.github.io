@@ -14,3 +14,8 @@ This is just a space to keep track of my collection of retro consoles
    collections="consoles_mobile" 
    progress_values="started,done" %}
 
+## Pile of To-Dos
+{% include collection_list.html 
+   collections="consoles,consoles_mobile" 
+   progress_values="pile" %}
+

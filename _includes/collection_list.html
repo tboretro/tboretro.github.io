@@ -8,7 +8,6 @@
 {% endcomment %}
 
 {% assign collections = include.collections | split: "," %}
-{% assign sort_fields = include.sort_fields | default: "released" | split: "," %}
 {% assign progress_values = include.progress_values | default: "done" | split: "," %}
 
 {% for collection_name in collections %}
@@ -24,39 +23,43 @@
 
   {% assign sorted_items = filtered_items | sort: "sortkey" %}
 
-  <ul>
-  {% for item in sorted_items %}
-    <li>
-      {% assign display_text = item.title %}
-      {% comment %} create empty array: {% endcomment %}
-      {%- assign info_parts = "" | split: "" -%}
+  {% if sorted_items.size == 0 %}
+    <em>(Nothing in the pile at the moment.)</li>
+  {% else %}
+    <ul>
+    {% for item in sorted_items %}
+      <li>
+        {% assign display_text = item.title %}
+        {% comment %} create empty array: {% endcomment %}
+        {%- assign info_parts = "" | split: "" -%}
 
-      {%- if item.class -%}
-        {% assign class_str = item.class | append: "-class" %}
-        {% assign info_parts = info_parts | push: class_str %}
-      {%- endif -%}
+        {%- if item.class -%}
+          {% assign class_str = item.class | append: "-class" %}
+          {% assign info_parts = info_parts | push: class_str %}
+        {%- endif -%}
 
-      {%- if item.released -%}
-        {% assign released_str = "released in " | append: item.released %}
-        {% assign info_parts = info_parts | push: released_str %}
-      {%- endif -%}
+        {%- if item.released -%}
+          {% assign released_str = "released in " | append: item.released %}
+          {% assign info_parts = info_parts | push: released_str %}
+        {%- endif -%}
 
-      {%- if info_parts.size > 0 -%}
-        {% assign info_text = info_parts | join: ", " %}
-        {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
-      {%- endif -%}
+        {%- if info_parts.size > 0 -%}
+          {% assign info_text = info_parts | join: ", " %}
+          {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
+        {%- endif -%}
 
-      {% if item.progress == "pile" %}
-          {{ display_text }}
-      {% else %}
-        {% if item.documented == "stub" %}
-          {{ display_text }} <em>— documentation pending</em>
+        {% if item.progress == "pile" %}
+            {{ display_text }}
         {% else %}
-          <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-          {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+          {% if item.documented == "stub" %}
+            {{ display_text }} <em>— documentation pending</em>
+          {% else %}
+            <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
+            {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+          {% endif %}
         {% endif %}
-      {% endif %}
-    </li>
-  {% endfor %}
-  </ul>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
 {% endfor %}
