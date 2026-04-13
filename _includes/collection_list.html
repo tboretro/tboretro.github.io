@@ -31,7 +31,7 @@
 {% assign sorted_items = filtered_items | sort: "sortkey" %}
 
 {% if sorted_items.size == 0 %}
-  <p>(Pile is empty)</p>
+  <p><em>(Nothing to do at the moment.)</em></p>
 {% else %}
   <ul>
     {% for item in sorted_items %}
