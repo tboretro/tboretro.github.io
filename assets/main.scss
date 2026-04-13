@@ -13,6 +13,7 @@ html body div.page-index ol {
   list-style: none;    /* no bullets */
   margin: 0;           /* remove container margins */
   padding: 0;          /* remove container padding */
+  margin-bottom: 0.5em; /* small spacing below list */
 }
 
 /* List items on homepage */
@@ -32,7 +33,7 @@ html body div.page-index p.empty-list {
 html body div[class^="collection-"] ul,
 html body div[class^="collection-"] ol {
   margin-top: 0.25em;   /* small spacing above list */
-  margin-bottom: 0.25em; /* small spacing below list */
+  margin-bottom: 0.5em; /* small spacing below list */
   padding-left: 1.2em;  /* standard indent */
 }
 
