@@ -10,18 +10,18 @@
 /* List containers on homepage */
 html body div.page-index ul,
 html body div.page-index ol {
-  list-style: none;    // no bullets
-  margin: 0;           // remove container margins
-  padding: 0;          // remove container padding
+  list-style: none;    /* no bullets */
+  margin: 0;           /* remove container margins */
+  padding: 0;          /* remove container padding */
 }
 
 /* List items on homepage */
 html body div.page-index ul li,
 html body div.page-index ol li,
-p.empty-list {
-  margin: 0.5em 0;     // spacing between items
-  padding: 0;          // remove padding
+html body div.page-index p.empty-list {
+  margin: 0.5em 0;     /* spacing between items */
   line-height: 1.4;
+  padding-left: 1.2em;  /* standard indent */
 }
 
 /* -----------------------------
@@ -31,15 +31,15 @@ p.empty-list {
 /* Container lists for all collections */
 html body div[class^="collection-"] ul,
 html body div[class^="collection-"] ol {
-  margin-top: 0.25em;   // small spacing above list
-  margin-bottom: 0.25em; // small spacing below list
-  padding-left: 1.2em;  // standard indent
+  margin-top: 0.25em;   /* small spacing above list */
+  margin-bottom: 0.25em; /* small spacing below list */
+  padding-left: 1.2em;  /* standard indent */
 }
 
 /* Nested lists in collections */
 html body div[class^="collection-"] ul ul,
 html body div[class^="collection-"] ol ol {
-  padding-left: 1.2em; // indent sublists
+  padding-left: 1.2em; /* indent sublists */
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
