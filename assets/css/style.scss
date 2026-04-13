@@ -17,7 +17,8 @@ html body div.page-index ol {
 
 /* List items on homepage */
 html body div.page-index ul li,
-html body div.page-index ol li {
+html body div.page-index ol li,
+p.empty-list {
   margin: 0.5em 0;     // spacing between items
   padding: 0;          // remove padding
   line-height: 1.4;
