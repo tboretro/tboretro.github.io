@@ -2,6 +2,9 @@
   Include expects:
     - collections: comma-separated collection names (e.g., "home_computers, ibm_portables")
     - progress_values: comma-separated progress values to include (default: "done")
+
+  Values for progress: pile, started, done
+  Values for documentated: stub, started, done
 {% endcomment %}
 
 {% assign collections = include.collections | split: "," %}
@@ -43,7 +46,7 @@
         {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
       {%- endif -%}
 
-      {% if item.progress == "stub" %}
+      {% if item.progress == "pile" %}
           {{ display_text }}
       {% else %}
         {% if item.documented == "stub" %}
