@@ -30,10 +30,10 @@
 
 {% assign sorted_items = filtered_items | sort: "sortkey" %}
 
-<ul>
-  {% if sorted_items.size == 0 %}
-    <li>(Pile is empty)</li>
-  {% else %}  
+{% if sorted_items.size == 0 %}
+  <p>(Pile is empty)</p>
+{% else %}
+  <ul>
     {% for item in sorted_items %}
       <li>
         {% assign display_text = item.title %}
@@ -67,5 +67,5 @@
         {% endif %}
       </li>
     {% endfor %}
-  {% endif %}
-</ul>
+  </ul>
+{% endif %}
