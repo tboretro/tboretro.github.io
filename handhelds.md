@@ -1,21 +1,21 @@
-# Consoles
+# Handhelds
 
-This is just a space to keep track of my collection of retro consoles.
+This is just a space to keep track of my collection of retro calculators and pdas.
 
-## Game Consoles
+## Calculators
 
 {% include collection_list.html 
-   collections="consoles" 
+   collections="calculators" 
    progress_values="started,done" %}
 
-## Mobile Game Consoles
+## PDAs
 
 {% include collection_list.html 
-   collections="consoles_mobile" 
+   collections="pdas" 
    progress_values="started,done" %}
 
 ## Pile of To-Dos
 {% include collection_list.html 
-   collections="consoles,consoles_mobile" 
+   collections="calculators,pdas" 
    progress_values="pile" %}
 

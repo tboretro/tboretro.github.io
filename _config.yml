@@ -6,7 +6,7 @@ url: "https://tboretro.github.io"
 header_pages:
   - index.md
   - consoles.md
-  - pile.md
+  - handhelds.md
   - links.md
   - intern.md
 
@@ -20,7 +20,12 @@ collections:
   consoles:
     output: true
   consoles_mobile:
+    output: true
+  calculators:
+    output: true
+  pdas:
     output: true  # Do not forget to add new collections to the defaults below!
+
 
 defaults:
   - scope:
@@ -55,5 +60,15 @@ defaults:
   - scope:
       path: ""      # site-wide
       type: "consoles_mobile"
+    values:
+      layout: "home"
+  - scope:
+      path: ""      # site-wide
+      type: "calculators"
+    values:
+      layout: "home"
+  - scope:
+      path: ""      # site-wide
+      type: "pdas"
     values:
       layout: "home"

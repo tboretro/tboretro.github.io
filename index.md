@@ -1,6 +1,6 @@
 # Computers
 
-This is just a space to keep track of my collection of retro computer stuff
+This is just a space to keep track of my collection of retro computers.
 
 ## Home Computers
 
