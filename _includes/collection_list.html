@@ -43,11 +43,15 @@
         {% assign display_text = display_text | append: " (" | append: info_text | append: ")" %}
       {%- endif -%}
 
-      {% if item.documented == "stub" %}
-        {{ display_text }} <em>— documentation pending</em>
+      {% if item.progress == "stub" %}
+          {{ display_text }}
       {% else %}
-        <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
-        {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+        {% if item.documented == "stub" %}
+          {{ display_text }} <em>— documentation pending</em>
+        {% else %}
+          <a href="{{ item.url | relative_url }}">{{ display_text }}</a>
+          {% if item.documented != "done" %} <em>— documentation in progress</em>{% endif %}
+        {% endif %}
       {% endif %}
     </li>
   {% endfor %}
