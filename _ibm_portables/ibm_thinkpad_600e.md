@@ -1,7 +1,7 @@
 ---
 title: IBM Thinkpad 600e
 xclass: Pentium-4
-xreleased: 1998
+released: 1998
 progress: started
 documented: stub
 xsortkey: 9999
