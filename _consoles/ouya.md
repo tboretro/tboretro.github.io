@@ -1,6 +1,6 @@
 ---
 title: Ouya
-released: 2012
+released: 2013
 progress: pile
 documented: stub
 sortkey: 2012_0
