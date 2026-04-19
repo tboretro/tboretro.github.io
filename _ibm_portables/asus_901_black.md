@@ -1,18 +1,18 @@
 ---
-title: HP 200LX 2MB
-class: 186
-released: 1994
-progress: started
+title: Asus eeePC 901 (black)
+class: Atom N270
+released: 2008
+progress: pile
 documented: stub
-sortkey: 186_1994
+xsortkey: 9999
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: TODO
-Processor: TODO
+Model: Asus eeePC 901
+Processor: Intel Atom N270 1.6Ghz
 Memory: TODO
 SSD: Transcend TODO
 Installed OS: TODO
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/HP_200LX)
+[Wikipedia](https://en.wikipedia.org/wiki/Asus_Eee_PC)

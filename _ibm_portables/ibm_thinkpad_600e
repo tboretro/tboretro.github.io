@@ -1,10 +1,10 @@
 ---
-title: HP 200LX 2MB
-class: 186
-released: 1994
+title: IBM Thinkpad 600e
+xclass: Pentium-4
+xreleased: abc
 progress: started
 documented: stub
-sortkey: 186_1994
+xsortkey: 9999
 ---
 
 # {{ page.title }}
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/HP_200LX)
+TODO [Wikipedia]()

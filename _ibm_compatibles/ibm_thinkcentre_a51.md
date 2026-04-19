@@ -12,6 +12,10 @@ xsortkey: 9999
 ## Information
 
 Model: TODO
+Processor: TODO
+Memory: TODO
+SSD: Transcend TODO
+Installed OS: TODO
 
 Board Revision: TODO
 

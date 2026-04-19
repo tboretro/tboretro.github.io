@@ -1,18 +1,18 @@
 ---
-title: HP 200LX 2MB
-class: 186
-released: 1994
-progress: started
+title: Asus eeePC 1215N (black)
+class: Atom D525
+released: 2010
+progress: pile
 documented: stub
-sortkey: 186_1994
+xsortkey: 9999
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: TODO
-Processor: TODO
+Model: Asus eeePC 900
+Processor: Intel Atom D525
 Memory: TODO
 SSD: Transcend TODO
 Installed OS: TODO
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/HP_200LX)
+[Wikipedia](https://en.wikipedia.org/wiki/Asus_Eee_PC)

@@ -12,6 +12,10 @@ sortkey: 286_1990
 ## Information
 
 Model: TODO
+Processor: TODO
+Memory: TODO
+HDD: Transcend TODO
+Installed OS: TODO
 
 Board Revision: TODO
 
