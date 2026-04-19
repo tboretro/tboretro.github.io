@@ -1,7 +1,7 @@
 ---
 title: IBM Thinkpad 600e
 xclass: Pentium-4
-xreleased: abc
+xreleased: 1998
 progress: started
 documented: stub
 xsortkey: 9999
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-TODO [Wikipedia]()
+[Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_600)

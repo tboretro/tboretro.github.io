@@ -1,7 +1,7 @@
 ---
 title: MiTAC 4022
-xclass: Pentium-4
-xreleased: abc
+class: 486
+released: 1993
 progress: started
 documented: stub
 xsortkey: 9999
@@ -12,7 +12,7 @@ xsortkey: 9999
 ## Information
 
 Model: MiTAC 4022
-Processor: TODO
+Processor: Cyrix 486 DX2-6
 Memory: TODO
 SSD: Transcend TODO
 Installed OS: TODO

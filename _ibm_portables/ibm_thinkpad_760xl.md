@@ -1,8 +1,8 @@
 ---
 title: IBM Thinkpad 760XL
 xclass: Pentium-4
-xreleased: abc
-progress: started
+released: 1995
+progress: pile
 documented: stub
 xsortkey: 9999
 ---
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-TODO [Wikipedia]()
+[Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_760)

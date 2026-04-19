@@ -1,7 +1,7 @@
 ---
 title: Asus eeePC 901 (WinXP) (blue)
 class: Atom N270
-xreleased: 2008
+released: 2008
 progress: started
 documented: stub
 xsortkey: 9999
