@@ -1,8 +1,8 @@
 ---
-title: IBM Thinkpad 760XL
+title: Highscreen Bluenote II (Mono)
 xclass: Pentium-4
 xreleased: abc
-progress: started
+progress: pile
 documented: stub
 xsortkey: 9999
 ---
@@ -11,7 +11,7 @@ xsortkey: 9999
 
 ## Information
 
-Model: IBM Thinkpad 760XL
+Model: Highscreen Bluenote II (Mono)
 Processor: TODO
 Memory: TODO
 SSD: Transcend TODO

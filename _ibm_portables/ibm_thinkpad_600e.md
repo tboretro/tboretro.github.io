@@ -1,5 +1,5 @@
 ---
-title: IBM Thinkpad 760XL
+title: IBM Thinkpad 600e
 xclass: Pentium-4
 xreleased: abc
 progress: started
@@ -11,7 +11,7 @@ xsortkey: 9999
 
 ## Information
 
-Model: IBM Thinkpad 760XL
+Model: IBM Thinkpad 600e
 Processor: TODO
 Memory: TODO
 SSD: Transcend TODO

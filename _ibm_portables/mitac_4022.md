@@ -1,5 +1,5 @@
 ---
-title: IBM Thinkpad 600e
+title: MiTAC 4022
 xclass: Pentium-4
 xreleased: abc
 progress: started
@@ -11,7 +11,7 @@ xsortkey: 9999
 
 ## Information
 
-Model: TODO
+Model: MiTAC 4022
 Processor: TODO
 Memory: TODO
 SSD: Transcend TODO
