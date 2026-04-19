@@ -4,7 +4,7 @@ class: Atom D525
 released: 2010
 progress: pile
 documented: stub
-xsortkey: 9999
+sortkey: 2010
 ---
 
 # {{ page.title }}

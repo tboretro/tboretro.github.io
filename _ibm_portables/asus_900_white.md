@@ -4,7 +4,7 @@ class: Celeron
 released: 2008
 progress: pile
 documented: stub
-xsortkey: 9999
+sortkey: 2008
 ---
 
 # {{ page.title }}
