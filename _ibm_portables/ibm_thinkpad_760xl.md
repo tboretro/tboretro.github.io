@@ -4,7 +4,7 @@ xclass: Pentium-4
 released: 1995
 progress: pile
 documented: stub
-xsortkey: 1995_586
+sortkey: 1995_586
 ---
 
 # {{ page.title }}

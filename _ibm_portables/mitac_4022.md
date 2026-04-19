@@ -4,7 +4,7 @@ class: 486
 released: 1993
 progress: started
 documented: stub
-xsortkey: 1993_486
+sortkey: 1993_486
 ---
 
 # {{ page.title }}
