@@ -13,6 +13,7 @@ sortkey: 2009_1
 Model: Sony Playstation 3 Slim 
 
 Serial Number: 03-27456922-5667403-CECH-25048
+
 Date Code: 0C
 
 ## Also plays

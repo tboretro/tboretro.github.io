@@ -1,3 +1,14 @@
+# To-Dos
+
+* Add devices
+    * Still not all IBM Thinkpads included
+    * Handhelds / calculators
+    * Maybe add hifi setup
+* Sortig of IBM comp: first class, then year (or other way around?)
+* Simplify SCSS (looks a little bit off)
+* Layout Links page (more like list on index pages)
+* Add photo gallery (ask ChatGPT chat for ideas how to)
+
 # Local Setup
 
 ## Tool Installation

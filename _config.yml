@@ -8,7 +8,6 @@ header_pages:
   - consoles.md
   - handhelds.md
   - links.md
-  - intern.md
 
 collections:
   home_computers:
