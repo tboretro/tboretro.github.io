@@ -20,7 +20,6 @@ Board Serial Number: 438
 
 ## Plays
 
-<!-- * [Panasonic 3DO](https://en.wikipedia.org/wiki/3DO)-->
 <!-- * Atari X+ Y-->
 <!-- * Atari Jaguar-->
 * [NEC PC Engine](https://en.wikipedia.org/wiki/TurboGrafx-16)
@@ -28,6 +27,7 @@ Board Serial Number: 438
 * [Nintendo Entertainment System](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System)
 * [Nintendo Super Entertainsment System](https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System)
 * [Nintendo 64](https://en.wikipedia.org/wiki/Nintendo_64)
+* [Panasonic 3DO](https://en.wikipedia.org/wiki/3DO)
 * [Philips CD-i](https://en.wikipedia.org/wiki/CD-i)
 * [Sega Master System](https://en.wikipedia.org/wiki/Master_System)
 * [Sega Mega Drive](https://en.wikipedia.org/wiki/Sega_Genesis)
