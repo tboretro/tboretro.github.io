@@ -31,7 +31,7 @@ Date Code: 0C
 
 * Replaced thermal paste
 * Upgraded internal HDD (500GB)
-* Added SSD on USB (1TB WD Blue SN580)
+* Added SSD on USB (2TB WD Blue SN580)
 * Installed Evilnat 4.93.1 custom firmware with webMAN MOD 1.47.48q
 
 ## Links
