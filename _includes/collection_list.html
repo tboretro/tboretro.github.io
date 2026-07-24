@@ -3,7 +3,7 @@
     - collections: comma-separated collection names (e.g., "home_computers, ibm_portables")
     - progress_values: comma-separated progress values to include (default: "done")
 
-  Values for progress: pile, started, done
+  Values for progress: pile, started, done, broken
   Values for documentated: stub, started, done
 {% endcomment %}
 
@@ -48,6 +48,10 @@
         {%- if item.released -%}
           {% assign released_str = "released in " | append: item.released %}
           {% assign info_parts = info_parts | push: released_str %}
+        {%- endif -%}
+
+        {%- if item.progress == "broken" -%}
+          {% assign info_parts = info_parts | push: "broken" %}
         {%- endif -%}
 
         {%- if info_parts.size > 0 -%}

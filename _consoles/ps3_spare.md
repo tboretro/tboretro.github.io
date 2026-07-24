@@ -1,7 +1,7 @@
 ---
 title: Sony Playstation 3 (Spare)
 released: 2009
-progress: done
+progress: broken
 documented: done
 sortkey: 2009_2
 ---
@@ -25,6 +25,10 @@ Date Code: 0C
 * Upgraded to internal SSD (1TB Samsung EVO 870)
 * Added SSD on USB (1TB WD Blue SN580)
 * Installed Evilnat 4.92.2 custom firmware with webMAN MOD 1.47.48n
+
+## Broken
+
+* Drive tries to spin up disc, but does not recongnize it. Chneges drive and cables - seems to be capacitors on board?
 
 ## Links
 

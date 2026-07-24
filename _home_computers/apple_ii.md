@@ -1,7 +1,7 @@
 ---
 title: Apple IIc
 released: 1984
-progress: done
+progress: broken
 documented: done
 sortkey: 1984
 ---
@@ -28,6 +28,10 @@ Board Serial Number: 1385673
   * Including the drive switcher to boot from FloppyEmu
 * Updated to [ROM 4X](https://github.com/mgcaret/rom4x)
 * Added a new power brick
+
+## Broken
+
+* [IWM](https://en.wikipedia.org/wiki/Integrated_Woz_Machine) is broken, which prevents computer from booting
 
 ## Links
 
