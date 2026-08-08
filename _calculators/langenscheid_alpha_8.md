@@ -1,8 +1,8 @@
 ---
 title: Langenscheid alpha 8
 released: 1983
-progress: pile
-documented: stub
+progress: done
+documented: done
 sortkey: 1983
 ---
 
@@ -10,22 +10,12 @@ sortkey: 1983
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
+Model: Langenscheid alpha 8
 
-Board Revision: TODO
-
-Board Serial Number: TODO
-
-Case: Macintosh SE/30
+Serial Number: 378
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
+* Manual (German)
 
-## {{ site.data.section_headers.sections.modern_additions }}
-
-* TODO
-
-## {{ site.data.section_headers.sections.links }}
-
-TODO [Wikipedia]()
+[More Information (German)](https://arnowelzel.de/projekte/technikmuseum/rechner/langenscheidt-alpha-8)

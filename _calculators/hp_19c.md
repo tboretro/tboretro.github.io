@@ -12,7 +12,7 @@ sortkey: 1977
 
 Model: Hewlett Packard HP-19C
 
-Board Serial Number: 1801S12652
+Serial Number: 1801S12652
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
@@ -21,3 +21,4 @@ Board Serial Number: 1801S12652
 ## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/HP-19C/-29C)
+[RSKey](https://www.rskey.org/hp19c)

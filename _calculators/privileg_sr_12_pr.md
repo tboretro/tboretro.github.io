@@ -1,8 +1,8 @@
 ---
-title: Privileg SR 12 PR (Canon F-800P)
+title: Privileg SR 12 PR
 released: 1989
-progress: pile
-documented: stub
+progress: done
+documented: done
 sortkey: 1989
 ---
 
@@ -10,22 +10,14 @@ sortkey: 1989
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
+Model: Privileg SR 12 PR
 
-Board Revision: TODO
-
-Board Serial Number: TODO
-
-Case: Macintosh SE/30
+OEM variant of: Canon F-800P
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
-
-## {{ site.data.section_headers.sections.modern_additions }}
-
-* TODO
+* Manual (German)
 
 ## {{ site.data.section_headers.sections.links }}
 
-TODO [Wikipedia]()
+[RSKey](https://www.rskey.org/sr12pr)
