@@ -1,17 +1,17 @@
 ---
-title: IBM Thinkpad 760XL
+title: IBM Thinkpad 600
 xclass: Pentium MMX
-released: 1995
-progress: pile
+released: 1998
+progress: started
 documented: stub
-sortkey: 1995_586
+sortkey: 1998_586
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: IBM Thinkpad 760XL
+Model: IBM Thinkpad 600e
 Processor: TODO
 Memory: TODO
 SSD: Transcend TODO
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_760)
+[Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_600)

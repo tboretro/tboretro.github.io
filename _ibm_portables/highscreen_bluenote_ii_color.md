@@ -1,17 +1,17 @@
 ---
-title: IBM Thinkpad 760XL
-xclass: Pentium MMX
-released: 1995
+title: Highscreen Bluenote II (Color)
+xclass: Pentium-4
+xreleased: abc
 progress: pile
 documented: stub
-sortkey: 1995_586
+xsortkey: 9999
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: IBM Thinkpad 760XL
+Model: Highscreen Bluenote II (Mono)
 Processor: TODO
 Memory: TODO
 SSD: Transcend TODO
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_760)
+TODO [Wikipedia]()

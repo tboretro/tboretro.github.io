@@ -1,6 +1,6 @@
 ---
 title: IBM Thinkpad 600e
-xclass: Pentium-4
+xclass: Pentium II (?)
 released: 1998
 progress: started
 documented: stub

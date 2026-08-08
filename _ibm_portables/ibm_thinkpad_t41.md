@@ -1,17 +1,17 @@
 ---
-title: IBM Thinkpad 760XL
-xclass: Pentium MMX
-released: 1995
+title: IBM Thinkpad T41
+xclass: Pentium-M
+released: 2003
 progress: pile
 documented: stub
-sortkey: 1995_586
+sortkey: 2003_586
 ---
 
 # {{ page.title }}
 
 ## Information
 
-Model: IBM Thinkpad 760XL
+Model: IBM Thinkpad T41
 Processor: TODO
 Memory: TODO
 SSD: Transcend TODO
@@ -31,4 +31,4 @@ Board Serial Number: TODO
 
 ## Links
 
-[Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_760)
+[Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_T41)

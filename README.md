@@ -1,7 +1,6 @@
 # To-Dos
 
 * Add devices
-    * Still not all IBM Thinkpads included
     * Handhelds / calculators
     * Maybe add hifi setup
 * Sortig of IBM comp: first class, then year (or other way around?)
