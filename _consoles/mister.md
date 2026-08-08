@@ -25,7 +25,7 @@ Board Serial Number: 438
 * [NEC PC Engine](https://en.wikipedia.org/wiki/TurboGrafx-16)
 * [NEC PC Engine CD](https://en.wikipedia.org/wiki/TurboGrafx-16#TurboGrafx-CD/CD-ROM%C2%B2)
 * [Nintendo Entertainment System](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System)
-* [Nintendo Super Entertainsment System](https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System)
+* [Nintendo Super Entertainment System](https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System)
 * [Nintendo 64](https://en.wikipedia.org/wiki/Nintendo_64)
 * [Panasonic 3DO](https://en.wikipedia.org/wiki/3DO)
 * [Philips CD-i](https://en.wikipedia.org/wiki/CD-i)

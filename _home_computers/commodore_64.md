@@ -27,7 +27,7 @@ Board Serial Number: 25030644, see below
 * Replaced main board with [Ultimate 64 Elite-II](https://ultimate64.com/Ultimate-64-Elite-MK2), which provides
   * FPGA emulation of a C64, two floppy drives, a tape drive and a printer
   * Socket for two SIDs
-  * Possibilty to switch all roms to enable e.g. fastloaders like JiffyDOS or Dolphin DOS
+  * Possibility to switch all roms to enable e.g. fastloaders like JiffyDOS or Dolphin DOS
   * Emulation of cartridges, ram expansions and processor upgrades
   * HDMI output and USB C power socket
   * ...

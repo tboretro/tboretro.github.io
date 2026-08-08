@@ -14,7 +14,7 @@ Model: Nintendo WiiU 32GB (black)
 
 Serial Number: FEH103866954
 
-MLC Manifacturer: Hynix
+MLC Manufacturer: Hynix
 
 ## {{ site.data.section_headers.sections.also_plays }}
 

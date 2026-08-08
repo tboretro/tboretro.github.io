@@ -28,7 +28,7 @@ Date Code: 0C
 
 ## {{ site.data.section_headers.sections.broken }}
 
-* Drive tries to spin up disc, but does not recongnize it. Chneges drive and cables - seems to be capacitors on board?
+* Drive tries to spin up disc, but does not recognize it. Changed drive and cables - seems to be capacitors on board?
 
 ## {{ site.data.section_headers.sections.links }}
 

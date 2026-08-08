@@ -14,7 +14,7 @@ Model: Nintendo Wii U 32GB (black)
 
 Serial Number: FEH109173353
 
-MLC Manifacturer: Samsung
+MLC Manufacturer: Samsung
 
 ## {{ site.data.section_headers.sections.also_plays }}
 
