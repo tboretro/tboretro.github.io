@@ -1,8 +1,8 @@
 ---
 title: Casio FX-795P
 released: 1987
-progress: pile
-documented: stub
+progress: done
+documented: done
 sortkey: 1987
 ---
 
@@ -10,22 +10,14 @@ sortkey: 1987
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
+Model: Casio FX-795P
 
-Board Revision: TODO
-
-Board Serial Number: TODO
-
-Case: Macintosh SE/30
+Serial Number: 7B108E
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
-
-## {{ site.data.section_headers.sections.modern_additions }}
-
-* TODO
+* Manual (German)
 
 ## {{ site.data.section_headers.sections.links }}
 
-TODO [Wikipedia]()
+[RSKey](https://www.rskey.org/fx795p)

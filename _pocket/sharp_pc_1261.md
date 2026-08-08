@@ -1,8 +1,8 @@
 ---
 title: Sharp PC 1261
 released: 1984
-progress: pile
-documented: stub
+progress: done
+documented: done
 sortkey: 1984
 ---
 
@@ -10,17 +10,17 @@ sortkey: 1984
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
+Model: Sharp PC 1261
 
-Board Revision: TODO
-
-Board Serial Number: TODO
-
-Case: Macintosh SE/30
+Serial Number: 57000614
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
+* Printer and microcassette recorder (broken)
+  * Serial Number: 31037834
+* Power supply
+* Microcassettes and printer paper
+* Manual (German)
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
@@ -28,4 +28,4 @@ Case: Macintosh SE/30
 
 ## {{ site.data.section_headers.sections.links }}
 
-TODO [Wikipedia]()
+[Pocket Computer Museum](http://pocket.free.fr/html/sharp/pc-1261_e.html)

@@ -14,6 +14,11 @@ Model: Hewlett Packard HP-19C
 
 Serial Number: 1801S12652
 
+## {{ site.data.section_headers.sections.original_peripherals }}
+
+* Printer paper
+* Power supply
+
 ## {{ site.data.section_headers.sections.modern_additions }}
 
 * Replaced batteries in battery pack
