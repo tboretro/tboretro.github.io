@@ -1,8 +1,7 @@
 # To-Dos
 
 * Add devices
-    * Handhelds / calculators
-    * Maybe add hifi setup
+    * Hifi setup
 * Sortig of IBM comp: first class, then year (or other way around?)
 * Simplify SCSS (looks a little bit off)
 * Layout Links page (more like list on index pages)
