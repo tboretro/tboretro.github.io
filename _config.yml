@@ -22,6 +22,8 @@ collections:
     output: true
   calculators:
     output: true
+  pocket:
+    output: true
   pdas:
     output: true  # Do not forget to add new collections to the defaults below!
 
