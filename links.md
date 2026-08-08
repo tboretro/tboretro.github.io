@@ -40,6 +40,8 @@ These are just some links to some thematically related sites.
 
 [Pagetable](https://www.pagetable.com/)
 
+[Stone Tools]([https://www.pagetable.com/](https://stonetools.ghost.io/))
+
 ## Games related blogs
 
 [Finnish Retro Game Comparison Blog](https://frgcb.blogspot.com/)
