@@ -8,20 +8,20 @@ sortkey: 2013_0
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: TODO
 
 Serial Number: TODO
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * TODO
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * TODO
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://de.wikipedia.org/wiki/Ouya)

@@ -8,7 +8,7 @@ sortkey: 2012_1
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Nintendo Wii U 32GB (black)
 
@@ -16,12 +16,12 @@ Serial Number: FEH109173353
 
 MLC Manifacturer: Samsung
 
-## Also plays
+## {{ site.data.section_headers.sections.also_plays }}
 
 * [Nintendo Game Cube](https://en.wikipedia.org/wiki/GameCube)
 * [Nintendo Wii](https://en.wikipedia.org/wiki/Wii)
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * WiiU GamePad (black)
 * WiiU Pro Controller (black)
@@ -31,11 +31,11 @@ MLC Manifacturer: Samsung
 * WiiU Fit Meter (black)
 * Sensor bar (black)
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Added 1TB SSD on USB
 * Installed Aroma Beta 24 custom firmware
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Wii_U)

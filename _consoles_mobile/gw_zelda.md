@@ -8,12 +8,12 @@ sortkey: 2020
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Nintendo Game & Watch: The Legend of Zelda
 
 Serial Number: BBE10002667194
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/The_Legend_of_Zelda_LCD_games#Game_&_Watch:_The_Legend_of_Zelda)

@@ -1,0 +1,8 @@
+# Central section header definitions for device documentation
+sections:
+  information: "Information"
+  original_peripherals: "Original Peripherals"
+  modern_additions: "Modern Additions/Mods/Repairs"
+  broken: "Broken"
+  also_plays: "Also Plays"
+  links: "Links"

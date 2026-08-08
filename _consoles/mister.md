@@ -8,7 +8,7 @@ sortkey: 2021_0
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Heber Mister Multisystem
 
@@ -18,7 +18,7 @@ DE10 Nano Board Revision: C
 
 Board Serial Number: 438
 
-## Plays
+## {{ site.data.section_headers.sections.also_plays }}
 
 <!-- * Atari X+ Y-->
 <!-- * Atari Jaguar-->
@@ -40,12 +40,12 @@ Board Serial Number: 438
 
 ... and many more - these are just the ones I use.
 
-## Modern Peripherals
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * 256GB SSD on USB
 * 2x 8BitDo N30 Pro with 8BitDo Wireless Adapter 2
 * Rii Wireless Keyboard
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Manifacturer](https://multisystem.uk/products/mister-multisystem/)

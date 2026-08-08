@@ -8,7 +8,7 @@ sortkey: 1982
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: C64C
 
@@ -18,11 +18,11 @@ Board Serial Number: 25030644, see below
 
 2 SIDs: 6581, 8580R5
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * Commodore 1531 mouse
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Replaced main board with [Ultimate 64 Elite-II](https://ultimate64.com/Ultimate-64-Elite-MK2), which provides
   * FPGA emulation of a C64, two floppy drives, a tape drive and a printer
@@ -32,6 +32,6 @@ Board Serial Number: 25030644, see below
   * HDMI output and USB C power socket
   * ...
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Commodore_64)

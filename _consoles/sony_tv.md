@@ -8,7 +8,7 @@ sortkey: 2014_0
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Sony Playstation TV
 
@@ -16,20 +16,20 @@ Model Revision: VTE-1016
 
 Serial Number: 4250036
 
-## Also Plays
+## {{ site.data.section_headers.sections.also_plays }}
 
 * [Sony Playstation Portable](https://en.wikipedia.org/wiki/PlayStation_Portable)
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * 1x Dualshock 3
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Added SD2Vita mit 120GB microSD card
 * Installed HenKaku Enso custom firmware
 * Installed Adrenaline to boot into PSP firmware
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/PlayStation_TV)

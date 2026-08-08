@@ -8,7 +8,7 @@ sortkey: 1987
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Amiga A-500 (german)
 
@@ -18,12 +18,12 @@ Board Serial Number: 1625190
 
 Board Revision: 6A, which includes an ECS Agnus chip
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * Commodore Amiga Tank Mouse
 * 512KB fast mem RAM extension
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Added [ACA 500plus](https://wiki.icomp.de/wiki/ACA500plus), which provides 
   * Faster processor MC68SEC000, save up to 21Mhz
@@ -40,6 +40,6 @@ Board Revision: 6A, which includes an ECS Agnus chip
 * Switched to Gotek with [Flash Floppy](https://github.com/keirf/flashfloppy) 
 * Switched to [PowerShark](https://retrousbpower.com/) 
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Amiga_500)

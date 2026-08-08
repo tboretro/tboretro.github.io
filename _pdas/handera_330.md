@@ -8,7 +8,7 @@ sortkey: 2001
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: TODO
 
@@ -18,14 +18,14 @@ Board Serial Number: TODO
 
 Case: Macintosh SE/30
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * TODO
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * TODO
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/HandEra)

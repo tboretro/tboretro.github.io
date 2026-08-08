@@ -9,7 +9,7 @@ sortkey: 1993_486
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: MiTAC 4022
 Processor: Cyrix 486 DX2-6
@@ -21,14 +21,14 @@ Board Revision: TODO
 
 Board Serial Number: TODO
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * TODO
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * TODO
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 TODO [Wikipedia]()

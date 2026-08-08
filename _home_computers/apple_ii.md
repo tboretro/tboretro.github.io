@@ -8,7 +8,7 @@ sortkey: 1984
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Apple IIc (german)
 
@@ -16,23 +16,23 @@ Case Serial Number: 2A2S4 - 019343
 
 Board Serial Number: 1385673
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * Monitor Apple G091H
 * Apple PAL Modulator / Adapter
   * Includes composite port
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Added [FloppyEmu](https://www.bigmessowires.com/floppy-emu) which provides floppy and hard drive emulation
   * Including the drive switcher to boot from FloppyEmu
 * Updated to [ROM 4X](https://github.com/mgcaret/rom4x)
 * Added a new power brick
 
-## Broken
+## {{ site.data.section_headers.sections.broken }}
 
 * [IWM](https://en.wikipedia.org/wiki/Integrated_Woz_Machine) is broken, which prevents computer from booting
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Apple_IIc)

@@ -8,7 +8,7 @@ sortkey: 2023
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: ZX Spectrum Next Issue 4 (KS2)
 
@@ -22,10 +22,10 @@ Model: ZX Spectrum Next Issue 4 (KS2)
 <!-- * Sam Coupe -->
 <!-- * Other cores - todo: Amstrad CPC, weitere? -->
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * Raspberry Pi Zero "Accelerator" 
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/ZX_Spectrum_Next)

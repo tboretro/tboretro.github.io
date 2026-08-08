@@ -8,7 +8,7 @@ sortkey: 1983
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Atari 800XL
 
@@ -16,11 +16,11 @@ Case Serial Number: 72RHA 840010165 264
 
 Board Revision: PBT 254 CA024808 Rev. D (could also read "Rev. C", hard to make out)
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * Atari XC12 Program Recorder
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Added [SDriveMax](https://github.com/kbr-net/sdrive-max) with recent firmware 1.5
 * Fittet [GTIAdigitizer](https://github.com/c0pperdragon/LumaCode/wiki/GTIAdigitizer-(for-Atari-8bit)) to output LumaCode
@@ -29,6 +29,6 @@ Board Revision: PBT 254 CA024808 Rev. D (could also read "Rev. C", hard to make 
   * Closed now unused power connector
 * Replaced keyboard membrane
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Atari_800XL)

@@ -8,7 +8,7 @@ sortkey: 2012_2
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Nintendo WiiU 32GB (black)
 
@@ -16,19 +16,19 @@ Serial Number: FEH103866954
 
 MLC Manifacturer: Hynix
 
-## Also plays
+## {{ site.data.section_headers.sections.also_plays }}
 
 * [Nintendo Game Cube](https://en.wikipedia.org/wiki/GameCube)
 * [Nintendo Wii](https://en.wikipedia.org/wiki/Wii)
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * WiiU GamePad (black)
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Installed Aroma Beta 24 custom firmware
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Wii_U)32

@@ -8,12 +8,12 @@ sortkey: 2020
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Nintendo Game & Watch: Super Mario Bros.
 
 Serial Number: BAE10002146392
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Game_%26_Watch:_Super_Mario_Bros.)

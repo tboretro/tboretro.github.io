@@ -9,7 +9,7 @@ sortkey: 1998_586
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: IBM Thinkpad 600e
 Processor: TODO
@@ -21,14 +21,14 @@ Board Revision: TODO
 
 Board Serial Number: TODO
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * TODO
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * TODO
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/ThinkPad_600)

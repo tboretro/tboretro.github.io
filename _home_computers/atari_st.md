@@ -8,7 +8,7 @@ sortkey: 1986
 
 # {{ page.title }}
 
-## Information
+## {{ site.data.section_headers.sections.information }}
 
 Model: Atari ST 1040 STF (german)
 
@@ -16,12 +16,12 @@ Case Serial Number: A18404124418 M
 
 Board Revision: C070859-001
 
-## Original Peripherals
+## {{ site.data.section_headers.sections.original_peripherals }}
 
 * Monitor Atari SM124
 * Mouse Atari STM1
 
-## Modern Additions/Mods
+## {{ site.data.section_headers.sections.modern_additions }}
 
 * Switched power supply to 80W PicoPSU with 12V barrel jack connector, for idea see [here](https://blog.troed.se/projects/atari-st-picopsu-replacement/)
 * Fitted [Atari ST RGBtoHDMI](https://codeberg.org/CBMretro/Atari_ST_RGBtoHDMI_Adapter) 
@@ -33,7 +33,7 @@ Board Revision: C070859-001
   * Needed to move some solder bridges to switch form 2 ROMs to 6 ROMs
 * Rewired broken keyboard cable
 
-## Links
+## {{ site.data.section_headers.sections.links }}
 
 [Atari Computermuseum (german)](https://www.atari-computermuseum.de/1040st.htm)
 [Wikipedia](https://en.wikipedia.org/wiki/Atari_ST)
