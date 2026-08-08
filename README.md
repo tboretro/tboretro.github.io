@@ -1,7 +1,7 @@
 # To-Dos
 
 * Add devices
-    * Hifi setup
+    * Hifi setup for other rooms
     * Add iPad 1 (Can you sideload?)
 * Sortig of IBM comp: first class, then year (or other way around?)
 * Simplify SCSS (looks a little bit off)
