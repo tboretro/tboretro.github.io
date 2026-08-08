@@ -7,6 +7,7 @@ header_pages:
   - index.md
   - consoles.md
   - handhelds.md
+  - hifi.md
   - links.md
 
 collections:
