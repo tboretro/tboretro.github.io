@@ -22,10 +22,6 @@ Serial Number: 57000614
 * Microcassettes and printer paper
 * Manual (German)
 
-## {{ site.data.section_headers.sections.modern_additions }}
-
-* TODO
-
 ## {{ site.data.section_headers.sections.links }}
 
 [Pocket Computer Museum](http://pocket.free.fr/html/sharp/pc-1261_e.html)
