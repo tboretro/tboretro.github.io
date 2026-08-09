@@ -26,7 +26,7 @@ Date Code: 0C
 * Added SSD on USB (1TB WD Blue SN580)
 * Installed Evilnat 4.92.2 custom firmware with webMAN MOD 1.47.48n
 
-## {{ site.data.section_headers.sections.broken }}
+## {{ site.data.section_headers.sections.known_issues }}
 
 * Drive tries to spin up disc, but does not recognize it. Changed drive and cables - seems to be capacitors on board?
 

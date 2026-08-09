@@ -29,7 +29,7 @@ Board Serial Number: 1385673
 * Updated to [ROM 4X](https://github.com/mgcaret/rom4x)
 * Added a new power brick
 
-## {{ site.data.section_headers.sections.broken }}
+## {{ site.data.section_headers.sections.known_issues }}
 
 * [IWM](https://en.wikipedia.org/wiki/Integrated_Woz_Machine) is broken, which prevents computer from booting
 
