@@ -1,8 +1,8 @@
 ---
 title: Handera 330
 released: 2001
-progress: pile
-documented: stub
+progress: started
+documented: done
 sortkey: 2001
 ---
 
@@ -10,21 +10,24 @@ sortkey: 2001
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
+Model: Handera 330
 
-Board Revision: TODO
-
-Board Serial Number: TODO
-
-Case: Macintosh SE/30
+Serial Number: 4STR19R11071
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
+* Cradle
+* Palm foldable keyboard
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
-* TODO
+* 96MB CF card and 16MB SD card
+* Fixed boken battery contacts
+
+## {{ site.data.section_headers.sections.known_issues }}
+
+* Battery contacts still slip out when changing battery
+* Battery lid is broken
 
 ## {{ site.data.section_headers.sections.links }}
 
