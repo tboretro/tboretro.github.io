@@ -10,8 +10,8 @@ This is my hi-fi setup.
 * [Technics SL-J 300R Record player](https://www.hifi-wiki.de/index.php/Technics_SL-J_300_R)
 * [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) with [HiFiBerry DAC+ Zero](https://www.hifiberry.com/shop/boards/dacplus-zero/) and [moOde audio player](https://github.com/moode-player/moode) as Stream player 
 * [Pioneer EX-9000](https://www.hifi-wiki.de/index.php/Pioneer_EX-9000)
-* [SPL Vitalizer](https://spl.audio/en/spl-produkt/hifi-vitalizer/)
-* [Behringer Ultramizer Pro DSP1424](https://www.musikhaus-korn.de/en/behringer-ultramizer-pro-dsp1424-p-730104/pd/1829)
+* [SPL Vitalizer](https://web.archive.org/web/20001210061500/http://www.soundperformancelab.com/V_Hifi/in_kuerze.html) (via WayBackMachine)
+* [Behringer Ultramizer Pro DSP1424](https://web.archive.org/web/20080623062856/http://behringer.com/DSP1424P/index.cfm?lang=GER) (via WayBackMachine)
 * [Onkyo EQ-240 Equalizer](https://hifi-wiki.de/index.php/Onkyo_EQ-240)
 
 (Links are mostly in German.)
