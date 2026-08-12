@@ -28,7 +28,7 @@ Board Serial Number: 1385673
   * Including the drive switcher to boot from FloppyEmu
 * Updated to [ROM 4X](https://github.com/mgcaret/rom4x)
 * Added a new power brick
-* Changed broken [IWM]([IWM](https://en.wikipedia.org/wiki/Integrated_Woz_Machine)) chip
+* Swapped broken [IWM]([IWM](https://en.wikipedia.org/wiki/Integrated_Woz_Machine)) chip
 
 ## {{ site.data.section_headers.sections.links }}
 
