@@ -1,8 +1,8 @@
 ---
 title: Sharp Zaurus SL-5600
 released: 2002
-progress: pile
-documented: stub
+progress: done
+documented: done
 sortkey: 2002
 ---
 
@@ -10,21 +10,9 @@ sortkey: 2002
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
+Model: Sharp Zaurus SL-5600
 
-Board Revision: TODO
-
-Board Serial Number: TODO
-
-Case: Macintosh SE/30
-
-## {{ site.data.section_headers.sections.original_peripherals }}
-
-* TODO
-
-## {{ site.data.section_headers.sections.modern_additions }}
-
-* TODO
+Board Revision: 33000766
 
 ## {{ site.data.section_headers.sections.links }}
 

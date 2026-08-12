@@ -1,8 +1,8 @@
 ---
 title: Ouya
 released: 2013
-progress: pile
-documented: stub
+progress: done
+documented: done
 sortkey: 2013_0
 ---
 
@@ -10,17 +10,17 @@ sortkey: 2013_0
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
+Model: Ouya 1.0
 
-Serial Number: TODO
+Serial Number: 10WW32820003372
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
+* Controller
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
-* TODO
+* 32GB USB stick
 
 ## {{ site.data.section_headers.sections.links }}
 
