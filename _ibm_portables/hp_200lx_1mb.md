@@ -26,7 +26,7 @@ Installed OS: MS DOS 5.0 in ROM with Windows 3.0 and GEM
 ## {{ site.data.section_headers.sections.modern_additions }}
 
 * Added PCMCIA CF card adapter with 256MB CF card
-** With setup script to initialized ram disk after battery change
+  * With setup script to initialized ram disk after battery change
 
 ## {{ site.data.section_headers.sections.future_ideas }}
 
