@@ -30,6 +30,9 @@ Board Serial Number: 1385673
 * Added a new power brick
 * Swapped broken [IWM]([IWM](https://en.wikipedia.org/wiki/Integrated_Woz_Machine)) chip
 
+## {{ site.data.section_headers.sections.future_ideas }}
+* Switch power supply to small USB C power board like in Atari 800XL
+
 ## {{ site.data.section_headers.sections.links }}
 
 [Wikipedia](https://en.wikipedia.org/wiki/Apple_IIc)
