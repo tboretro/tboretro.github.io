@@ -21,7 +21,7 @@ Memory: 1MB
 
 Graphics: CGA LCD screen (mono)
 
-Installed OS: MS DOS 5.0 in ROM, Windows 3.0, GEM
+Installed OS: MS DOS 5.0 in ROM with Windows 3.0 and GEM
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 

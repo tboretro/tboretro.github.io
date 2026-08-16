@@ -28,6 +28,7 @@ Installed OS: MS DOS 6.22
 * Genius GM-6 3-button mouse with adapter
 ** Serial number 8711974
 * Power supply
+* Commodore laptop bag
 * Manuals (German)
 
 ## {{ site.data.section_headers.sections.modern_additions }}
