@@ -10,7 +10,7 @@ sortkey: 1986
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: Atari ST 1040 STF (german)
+Model: Atari ST 1040 STF (German)
 
 Case Serial Number: A18404124418 M
 

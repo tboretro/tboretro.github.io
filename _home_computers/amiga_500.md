@@ -10,7 +10,7 @@ sortkey: 1987
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: Amiga A-500 (german)
+Model: Amiga A-500 (German)
 
 Case Serial Number: 045940
 

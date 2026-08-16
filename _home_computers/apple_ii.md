@@ -10,7 +10,7 @@ sortkey: 1984
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: Apple IIc (german)
+Model: Apple IIc (German)
 
 Case Serial Number: 2A2S4 - 019343
 
