@@ -13,13 +13,13 @@ sortkey: 1990_286
 
 Model: Commodore C286-LT
 
-Serial number: TODO
+Serial number: CA1000060
 
 Processor: 80286 12MHz
 
 Memory: 1MB
 
-Graphics: VGA LCD screen (mono)
+Graphics: VGA LCD screen (backlit, mono)
 
 Installed OS: MS DOS 6.22
 
@@ -38,6 +38,7 @@ Installed OS: MS DOS 6.22
 * Recapped power supply board
 * Glued broken hinges
 * Swapped floppy drive belt
+* Swapped BIOS battery
 
 ## {{ site.data.section_headers.sections.links }}
 
