@@ -1,9 +1,9 @@
 ---
 title: IBM Thinkpad 600e
-xclass: Pentium II (?)
+class: Pentium II
 released: 1998
-progress: started
-documented: stub
+progress: done
+documented: done
 sortkey: 1998_586
 ---
 
@@ -11,23 +11,30 @@ sortkey: 1998_586
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: IBM Thinkpad 600e
-Processor: TODO
-Memory: TODO
-SSD: Transcend TODO
-Installed OS: TODO
+Model: IBM Thinkpad 600e (German)
 
-Board Revision: TODO
+Serial number: 5526PFN
 
-Board Serial Number: TODO
+Processor: Pentium II 400 MHz
+
+Memory: 544MB
+
+Graphics: XGA TFT screen (color)
+
+Installed OS: MS DOS 6.22 with WfW 3.11, Windows 98 SE, Windows XP SP3 as multiboot with Plop Boot Manager
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
+* CD-ROM drive XM-1902B
+* 1.44MB floppy drive
+* Additional external 1.44MB floppy drive
+* IBM PS/2 mouse
+* Power supply
+* IBM laptop bag
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
-* TODO
+* Added IDE to dual CF card with two 32GB CF cards
 
 ## {{ site.data.section_headers.sections.links }}
 
