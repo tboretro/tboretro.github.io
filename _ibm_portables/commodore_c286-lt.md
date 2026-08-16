@@ -3,7 +3,7 @@ title: Commodore C286-LT
 class: 286
 released: 1990
 progress: done
-documented: stub
+documented: done
 sortkey: 1990_286
 ---
 
@@ -11,24 +11,35 @@ sortkey: 1990_286
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
-Processor: TODO
-Memory: TODO
-HDD: Transcend TODO
-Installed OS: TODO
+Model: Commodore C286-LT
 
-Board Revision: TODO
+Serial number: TODO
 
-Board Serial Number: TODO
+Processor: 80286 12MHz
+
+Memory: 1MB
+
+Graphics: VGA LCD screen (mono)
+
+Installed OS: MS DOS 6.22
 
 ## {{ site.data.section_headers.sections.original_peripherals }}
 
-* TODO
+* Genius GM-6 3-button mouse with adapter
+** Serial number 8711974
+* Power supply
+* Manuals (German)
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
-* TODO
+* Replaced hard drive with 512MB CF card
+** Uses Ontrack software
+* Resoldered hdd connections on main board
+* Recapped power supply board
+* Glued broken hinges
+* Swapped floppy drive belt
 
 ## {{ site.data.section_headers.sections.links }}
 
-TODO [Wikipedia]()
+[Wikipedia](https://en.wikipedia.org/wiki/Commodore_IBM_PC_compatible_systems#Laptops)
+[C64-Wiki](https://www.c64-wiki.de/wiki/Commodore-Laptop_C286LT) (German)
