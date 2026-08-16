@@ -2,8 +2,8 @@
 title: HP 200LX 1MB
 class: 186
 released: 1994
-progress: started
-documented: stub
+progress: done
+documented: done
 sortkey: 1994_186
 ---
 
@@ -11,23 +11,27 @@ sortkey: 1994_186
 
 ## {{ site.data.section_headers.sections.information }}
 
-Model: TODO
-Processor: TODO
-Memory: TODO
-SSD: Transcend TODO
-Installed OS: TODO
+Model: HP 200LX 1MB (German)
 
-Board Revision: TODO
+Serial number: SG43302139
 
-Board Serial Number: TODO
+Processor: 80186 8MHz
 
-## {{ site.data.section_headers.sections.original_peripherals }}
+Memory: 1MB
 
-* TODO
+Graphics: CGA LCD screen (mono)
+
+Installed OS: MS DOS 5.0 in ROM, Windows 3.0, GEM
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
-* TODO
+* Added PCMCIA CF card adapter with 256MB CF card
+** With setup script to initialized ram disk after battery change
+
+## {{ site.data.section_headers.sections.future_ideas }}
+
+* Add 16MB memory expansion, distributed between EMM and ram disk
+* Solder adapter for propriatory serial port to use a mouse
 
 ## {{ site.data.section_headers.sections.links }}
 
