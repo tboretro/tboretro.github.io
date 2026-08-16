@@ -2,7 +2,7 @@
 title: IBM Thinkpad 600
 xclass: Pentium MMX
 released: 1998
-progress: started
+progress: pile
 documented: stub
 sortkey: 1998_586
 ---
