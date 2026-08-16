@@ -34,6 +34,8 @@ Installed OS: MS DOS 6.22 with WfW 3.11, Windows 98 SE, Windows XP SP3 as multib
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
+* Updated BIOS to 1.16
+* Upgraded RAM (see above)
 * Added IDE to dual CF card with two 32GB CF cards
 
 ## {{ site.data.section_headers.sections.links }}
