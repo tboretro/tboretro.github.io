@@ -30,7 +30,7 @@ Date Code: 0C
 ## {{ site.data.section_headers.sections.modern_additions }}
 
 * Replaced thermal paste
-* Upgraded internal HDD (500GB)
+* Upgraded internal HDD (1TB Samsung Evo 860)
 * Added SSD on USB (2TB WD Blue SN580)
 * Installed Evilnat 4.93.1 custom firmware with webMAN MOD 1.47.48q
 

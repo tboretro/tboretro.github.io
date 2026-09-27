@@ -28,7 +28,11 @@ Date Code: 0C
 
 ## {{ site.data.section_headers.sections.known_issues }}
 
-* Drive tries to spin up disc, but does not recognize it. Changed drive and cables - seems to be capacitors on board?
+* Drive tries to spin up disc, but does not recognize it. Tried:
+** Replacing laser pickup and cables
+** Swapping drive from known good PS3
+** Swapping power supply from known good PS3
+** Replacing capacitors in drive section on board
 
 ## {{ site.data.section_headers.sections.links }}
 
