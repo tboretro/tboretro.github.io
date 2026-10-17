@@ -1,7 +1,7 @@
 ---
 title: Sony Playstation 3 (Spare)
 released: 2009
-progress: broken
+progress: done
 documented: done
 sortkey: 2009_2
 ---
