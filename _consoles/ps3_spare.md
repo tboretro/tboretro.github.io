@@ -12,9 +12,9 @@ sortkey: 2009_2
 
 Model: Sony Playstation 3 Slim 
 
-Serial Number: 02-27456973-1484027-CECH-25048
+Serial Number: 03-27456922-6044671-CECH-2504B
 
-Date Code: 0C
+Date Code: 0D
 
 ## {{ site.data.section_headers.sections.also_plays }}
 
@@ -22,17 +22,13 @@ Date Code: 0C
 
 ## {{ site.data.section_headers.sections.modern_additions }}
 
+* Replaced thermal paste and battery
 * Upgraded to internal SSD (1TB Samsung EVO 870)
-* Added SSD on USB (1TB WD Blue SN580)
-* Installed Evilnat 4.92.2 custom firmware with webMAN MOD 1.47.48n
+* Installed Evilnat 4.93 custom firmware 
 
 ## {{ site.data.section_headers.sections.known_issues }}
 
-* Drive tries to spin up disc, but does not recognize it. Tried:
-  * Replacing laser pickup and cables
-  * Swapping drive from known good PS3
-  * Swapping power supply from known good PS3
-  * Replacing capacitors in drive section on board
+* No further setup as it is a spare
 
 ## {{ site.data.section_headers.sections.links }}
 
