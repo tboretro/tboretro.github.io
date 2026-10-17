@@ -27,6 +27,7 @@ Board Serial Number: 438
 * [Nintendo Entertainment System](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System)
 * [Nintendo Super Entertainment System](https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System)
 * [Nintendo 64](https://en.wikipedia.org/wiki/Nintendo_64)
+* [Nintendo Virtual Boy](hhttps://en.wikipedia.org/wiki/Virtual_Boy) with support for 3D televisions
 * [Panasonic 3DO](https://en.wikipedia.org/wiki/3DO)
 * [Philips CD-i](https://en.wikipedia.org/wiki/CD-i)
 * [Sega Master System](https://en.wikipedia.org/wiki/Master_System)
@@ -36,7 +37,6 @@ Board Serial Number: 438
 * [Sega Saturn](https://en.wikipedia.org/wiki/Sega_Saturn)
 * [SNK Neo Geo](https://en.wikipedia.org/wiki/Neo_Geo)
 * [Sony Playstation](https://en.wikipedia.org/wiki/PlayStation_(console))
-* [Vectrex](https://en.wikipedia.org/wiki/Vectrex)
 
 ... and many more - these are just the ones I use.
 
